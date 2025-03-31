@@ -18,9 +18,12 @@ const ClothingCard = ({ item, selected, onSelect }: ClothingCardProps) => {
       onClick={() => onSelect(item)}
     >
       <CardContent className="p-3">
-        <div className={`h-24 w-full ${item.color} rounded-md mb-2 flex items-center justify-center`}>
-          {/* This is a placeholder for the actual image */}
-          <span className="text-sm text-white text-opacity-80">{item.name}</span>
+        <div className="h-36 w-full rounded-md mb-2 overflow-hidden">
+          <img 
+            src={item.image} 
+            alt={item.name}
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="text-sm font-medium">{item.name}</div>
       </CardContent>

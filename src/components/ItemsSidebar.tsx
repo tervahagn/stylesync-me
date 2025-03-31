@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ClothingItem } from "@/data/clothingItems";
 import ClothingCard from "./ClothingCard";
-import { shirt, hat, shoe } from "lucide-react";
+import { Shirt, UserRoundCog, Footprints, ShoppingBag } from "lucide-react";
 
 interface ItemsSidebarProps {
   items: ClothingItem[];
@@ -42,15 +42,19 @@ const ItemsSidebar = ({ items, selected, onSelectItem }: ItemsSidebarProps) => {
         <div className="border-b">
           <TabsList className="w-full justify-start h-auto p-0 bg-transparent">
             <TabsTrigger value="top" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none data-[state=active]:shadow-none px-4 py-2">
+              <Shirt className="mr-2 h-4 w-4" />
               Tops
             </TabsTrigger>
             <TabsTrigger value="bottom" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none data-[state=active]:shadow-none px-4 py-2">
+              <ShoppingBag className="mr-2 h-4 w-4" />
               Bottoms
             </TabsTrigger>
             <TabsTrigger value="shoe" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none data-[state=active]:shadow-none px-4 py-2">
+              <Footprints className="mr-2 h-4 w-4" />
               Shoes
             </TabsTrigger>
             <TabsTrigger value="hat" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none data-[state=active]:shadow-none px-4 py-2">
+              <UserRoundCog className="mr-2 h-4 w-4" />
               Hats
             </TabsTrigger>
           </TabsList>

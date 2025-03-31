@@ -22,8 +22,12 @@ const Mannequin = ({ selectedItems }: MannequinProps) => {
         {/* Hat position */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-30 w-24 h-20">
           {selectedItems.hat ? (
-            <div className={`w-full h-full ${selectedItems.hat.color} rounded-md animate-item-change flex items-center justify-center`}>
-              <span className="text-xs text-white">{selectedItems.hat.name}</span>
+            <div className="w-full h-full rounded-md animate-item-change overflow-hidden">
+              <img 
+                src={selectedItems.hat.image} 
+                alt={selectedItems.hat.name}
+                className="w-full h-full object-cover" 
+              />
             </div>
           ) : (
             <div className="w-full h-full border-2 border-dashed border-gray-300 rounded-md flex items-center justify-center">
@@ -38,8 +42,12 @@ const Mannequin = ({ selectedItems }: MannequinProps) => {
         {/* Torso - where the top goes */}
         <div className="absolute top-[120px] left-1/2 transform -translate-x-1/2 w-48 h-[180px] flex items-center justify-center z-10">
           {selectedItems.top ? (
-            <div className={`w-full h-full ${selectedItems.top.color} rounded-md animate-item-change flex items-center justify-center`}>
-              <span className="text-sm text-white">{selectedItems.top.name}</span>
+            <div className="w-full h-full rounded-md animate-item-change overflow-hidden">
+              <img 
+                src={selectedItems.top.image} 
+                alt={selectedItems.top.name}
+                className="w-full h-full object-cover" 
+              />
             </div>
           ) : (
             <div className="w-full h-full bg-gray-300 rounded-md flex items-center justify-center">
@@ -51,8 +59,12 @@ const Mannequin = ({ selectedItems }: MannequinProps) => {
         {/* Legs - where the bottom goes */}
         <div className="absolute top-[300px] left-1/2 transform -translate-x-1/2 w-40 h-[140px] flex items-center justify-center">
           {selectedItems.bottom ? (
-            <div className={`w-full h-full ${selectedItems.bottom.color} rounded-md animate-item-change flex items-center justify-center`}>
-              <span className="text-sm text-white">{selectedItems.bottom.name}</span>
+            <div className="w-full h-full rounded-md animate-item-change overflow-hidden">
+              <img 
+                src={selectedItems.bottom.image} 
+                alt={selectedItems.bottom.name}
+                className="w-full h-full object-cover" 
+              />
             </div>
           ) : (
             <div className="w-full h-full bg-gray-300 rounded-md flex items-center justify-center">
@@ -64,8 +76,12 @@ const Mannequin = ({ selectedItems }: MannequinProps) => {
         {/* Feet - where the shoes go */}
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-40 h-12 flex justify-center space-x-2">
           {selectedItems.shoe ? (
-            <div className={`w-full ${selectedItems.shoe.color} rounded-md animate-item-change flex items-center justify-center`}>
-              <span className="text-xs text-white">{selectedItems.shoe.name}</span>
+            <div className="w-full rounded-md animate-item-change overflow-hidden">
+              <img 
+                src={selectedItems.shoe.image} 
+                alt={selectedItems.shoe.name}
+                className="w-full h-full object-cover" 
+              />
             </div>
           ) : (
             <div className="w-full border-2 border-dashed border-gray-300 rounded-md flex items-center justify-center">
