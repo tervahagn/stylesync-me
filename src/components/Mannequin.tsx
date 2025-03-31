@@ -53,81 +53,106 @@ const Mannequin = ({
         <p className="text-gray-500">Try on different items to see how they look</p>
       </div>
       
-      <div className="relative h-[500px] w-[300px]">
+      <div className="relative h-[600px] w-[340px]">
+        {/* Mannequin base image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/lovable-uploads/a74fa0fe-dcfd-4a56-97be-fb7c6ed21039.png" 
+            alt="Mannequin"
+            className="w-full h-full object-contain" 
+          />
+        </div>
+
+        {/* Clothing sections with dashed borders matching the image */}
+        
         {/* Hat position */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-30 w-24 h-20"
-             onClick={() => selectedItems.hat && showDetails(selectedItems.hat, 'hat')}>
-          {selectedItems.hat ? (
-            <div className="w-full h-full rounded-md overflow-hidden cursor-pointer">
+        <div 
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 z-30 w-[140px] h-[140px] cursor-pointer border-dashed border-green-500 rounded-md"
+          onClick={() => selectedItems.hat && showDetails(selectedItems.hat, 'hat')}
+        >
+          {selectedItems.hat && (
+            <div className="w-full h-full rounded-md overflow-hidden">
               <img 
                 src={selectedItems.hat.image} 
                 alt={selectedItems.hat.name}
-                className="w-full h-full object-cover" 
+                className="w-full h-full object-contain" 
               />
-            </div>
-          ) : (
-            <div className="w-full h-full border-2 border-dashed border-gray-300 rounded-md flex items-center justify-center">
-              <span className="text-xs text-gray-400">Hat</span>
             </div>
           )}
         </div>
         
-        {/* Head */}
-        <div className="absolute top-[45px] left-1/2 transform -translate-x-1/2 w-20 h-20 bg-gray-300 rounded-full z-20"></div>
-        
-        {/* Torso - where the top goes */}
-        <div className="absolute top-[120px] left-1/2 transform -translate-x-1/2 w-48 h-[180px] flex items-center justify-center z-10"
-             onClick={() => selectedItems.top && showDetails(selectedItems.top, 'top')}>
-          {selectedItems.top ? (
-            <div className="w-full h-full rounded-md overflow-hidden cursor-pointer">
+        {/* Top position */}
+        <div 
+          className="absolute top-[140px] left-1/2 transform -translate-x-1/2 z-20 w-[280px] h-[280px] cursor-pointer border-dashed border-green-500 rounded-md"
+          onClick={() => selectedItems.top && showDetails(selectedItems.top, 'top')}
+        >
+          {selectedItems.top && (
+            <div className="w-full h-full rounded-md overflow-hidden">
               <img 
                 src={selectedItems.top.image} 
                 alt={selectedItems.top.name}
-                className="w-full h-full object-cover" 
+                className="w-full h-full object-contain" 
               />
-            </div>
-          ) : (
-            <div className="w-full h-full bg-gray-300 rounded-md flex items-center justify-center">
-              <span className="text-sm text-gray-600">Select a top</span>
             </div>
           )}
         </div>
         
-        {/* Legs - where the bottom goes */}
-        <div className="absolute top-[300px] left-1/2 transform -translate-x-1/2 w-40 h-[140px] flex items-center justify-center"
-             onClick={() => selectedItems.bottom && showDetails(selectedItems.bottom, 'bottom')}>
-          {selectedItems.bottom ? (
-            <div className="w-full h-full rounded-md overflow-hidden cursor-pointer">
+        {/* Bottom position */}
+        <div 
+          className="absolute top-[420px] left-1/2 transform -translate-x-1/2 w-[280px] h-[280px] cursor-pointer border-dashed border-green-500 rounded-md"
+          onClick={() => selectedItems.bottom && showDetails(selectedItems.bottom, 'bottom')}
+        >
+          {selectedItems.bottom && (
+            <div className="w-full h-full rounded-md overflow-hidden">
               <img 
                 src={selectedItems.bottom.image} 
                 alt={selectedItems.bottom.name}
-                className="w-full h-full object-cover" 
+                className="w-full h-full object-contain" 
               />
-            </div>
-          ) : (
-            <div className="w-full h-full bg-gray-300 rounded-md flex items-center justify-center">
-              <span className="text-sm text-gray-600">Select bottoms</span>
             </div>
           )}
         </div>
         
-        {/* Feet - where the shoes go */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-40 h-12 flex justify-center space-x-2"
-             onClick={() => selectedItems.shoe && showDetails(selectedItems.shoe, 'shoe')}>
-          {selectedItems.shoe ? (
-            <div className="w-full rounded-md overflow-hidden cursor-pointer">
+        {/* Shoes position */}
+        <div 
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[200px] h-[80px] cursor-pointer border-dashed border-green-500 rounded-md"
+          onClick={() => selectedItems.shoe && showDetails(selectedItems.shoe, 'shoe')}
+        >
+          {selectedItems.shoe && (
+            <div className="w-full h-full rounded-md overflow-hidden">
               <img 
                 src={selectedItems.shoe.image} 
                 alt={selectedItems.shoe.name}
-                className="w-full h-full object-cover" 
+                className="w-full h-full object-contain" 
               />
-            </div>
-          ) : (
-            <div className="w-full border-2 border-dashed border-gray-300 rounded-md flex items-center justify-center">
-              <span className="text-xs text-gray-400">Shoes</span>
             </div>
           )}
         </div>
+
+        {/* Labels for empty sections */}
+        {!selectedItems.hat && (
+          <div className="absolute top-[60px] left-1/2 transform -translate-x-1/2 text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded z-40">
+            Hat
+          </div>
+        )}
+        
+        {!selectedItems.top && (
+          <div className="absolute top-[280px] left-1/2 transform -translate-x-1/2 text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded z-40">
+            Top
+          </div>
+        )}
+        
+        {!selectedItems.bottom && (
+          <div className="absolute top-[560px] left-1/2 transform -translate-x-1/2 text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded z-40">
+            Bottom
+          </div>
+        )}
+        
+        {!selectedItems.shoe && (
+          <div className="absolute bottom-[40px] left-1/2 transform -translate-x-1/2 text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded z-40">
+            Shoes
+          </div>
+        )}
       </div>
       
       {/* Item Details Panel */}
