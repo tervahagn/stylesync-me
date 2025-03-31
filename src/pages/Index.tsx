@@ -4,6 +4,8 @@ import { clothingItems, ClothingItem } from "@/data/clothingItems";
 import ItemsSidebar from "@/components/ItemsSidebar";
 import Mannequin from "@/components/Mannequin";
 import { useToast } from "@/components/ui/use-toast";
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
 
 const Index = () => {
   const { toast } = useToast();
@@ -33,10 +35,33 @@ const Index = () => {
     });
   };
 
+  const handleClearSelection = () => {
+    setSelectedItems({
+      top: null,
+      bottom: null,
+      shoe: null,
+      hat: null
+    });
+
+    toast({
+      title: "Selection Cleared",
+      description: "All clothing items have been removed from the mannequin.",
+      duration: 1500
+    });
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-white border-b px-6 py-4">
+      <header className="bg-white border-b px-6 py-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold">Virtual Fitting Room</h1>
+        <Button 
+          variant="destructive" 
+          size="sm" 
+          onClick={handleClearSelection}
+          disabled={!selectedItems.top && !selectedItems.bottom && !selectedItems.shoe && !selectedItems.hat}
+        >
+          <X className="mr-2" /> Clear All
+        </Button>
       </header>
       
       <main className="flex flex-1 overflow-hidden">
@@ -59,3 +84,4 @@ const Index = () => {
 };
 
 export default Index;
+
