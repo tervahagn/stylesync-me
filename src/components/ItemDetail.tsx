@@ -3,7 +3,6 @@ import { X } from "lucide-react";
 import { ClothingItem } from "@/data/clothingItems";
 import { Button } from "./ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
-import { useState } from "react";
 
 interface ItemDetailProps {
   item: ClothingItem;
@@ -22,6 +21,24 @@ const ItemDetail = ({
   onSizeChange, 
   onColorChange 
 }: ItemDetailProps) => {
+  // Function to get dynamic color class
+  const getColorClass = (color: string) => {
+    const colorMap: Record<string, string> = {
+      black: "bg-black",
+      white: "bg-white",
+      red: "bg-red-500",
+      blue: "bg-blue-500",
+      green: "bg-green-500",
+      yellow: "bg-yellow-500",
+      purple: "bg-purple-500",
+      pink: "bg-pink-500",
+      gray: "bg-gray-500",
+      brown: "bg-amber-800"
+    };
+    
+    return colorMap[color] || "bg-gray-300";
+  };
+
   return (
     <div className="p-4 bg-white rounded-lg shadow-lg">
       <div className="flex justify-between items-center mb-2">
@@ -48,7 +65,7 @@ const ItemDetail = ({
         <div className="flex justify-between items-center">
           <div>Color</div>
           <div className="flex items-center">
-            <div className={`w-4 h-4 rounded-full bg-${selectedColor}-500 mr-2`}></div>
+            <div className={`w-4 h-4 rounded-full ${getColorClass(selectedColor)} mr-2`}></div>
             <Select value={selectedColor} onValueChange={onColorChange}>
               <SelectTrigger className="w-24">
                 <SelectValue>{selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1)}</SelectValue>

@@ -3,7 +3,6 @@ import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ClothingItem } from "@/data/clothingItems";
-import { useState } from "react";
 
 interface ClothingCardProps {
   item: ClothingItem;
@@ -51,7 +50,7 @@ const ClothingCard = ({
         <div className="p-3">
           <div className="text-xs text-gray-500">{item.brand}</div>
           <div className="text-sm font-medium truncate">{item.name} {item.color}</div>
-          <div className="text-sm font-bold">£{item.price.toFixed(2)}</div>
+          <div className="text-sm font-bold">£{item.price && typeof item.price === 'number' ? item.price.toFixed(2) : '0.00'}</div>
         </div>
       </CardContent>
     </Card>

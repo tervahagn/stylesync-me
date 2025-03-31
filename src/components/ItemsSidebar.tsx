@@ -33,8 +33,8 @@ const ItemsSidebar = ({
 }: ItemsSidebarProps) => {
   const [activeCategory, setActiveCategory] = useState<string>("top");
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [selectedSize, setSelectedSize] = useState<string>("");
-  const [selectedColor, setSelectedColor] = useState<string>("");
+  const [selectedSize, setSelectedSize] = useState<string>("all_sizes");
+  const [selectedColor, setSelectedColor] = useState<string>("all_colors");
 
   // Filter items by category
   const getItemsByCategory = (category: string) => {
@@ -50,12 +50,12 @@ const ItemsSidebar = ({
     }
     
     // Apply size filter
-    if (selectedSize) {
+    if (selectedSize && selectedSize !== "all_sizes") {
       filteredItems = filteredItems.filter(item => item.sizes.includes(selectedSize));
     }
     
     // Apply color filter
-    if (selectedColor) {
+    if (selectedColor && selectedColor !== "all_colors") {
       filteredItems = filteredItems.filter(item => item.colors.includes(selectedColor));
     }
     
@@ -101,7 +101,7 @@ const ItemsSidebar = ({
               <SelectValue placeholder="Size" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Sizes</SelectItem>
+              <SelectItem value="all_sizes">All Sizes</SelectItem>
               {allSizes.map(size => (
                 <SelectItem key={size} value={size}>{size}</SelectItem>
               ))}
@@ -113,7 +113,7 @@ const ItemsSidebar = ({
               <SelectValue placeholder="Color" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Colors</SelectItem>
+              <SelectItem value="all_colors">All Colors</SelectItem>
               {allColors.map(color => (
                 <SelectItem key={color} value={color}>
                   {color.charAt(0).toUpperCase() + color.slice(1)}
