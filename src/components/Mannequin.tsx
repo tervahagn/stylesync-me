@@ -57,22 +57,25 @@ const Mannequin = ({
         {/* Mannequin base image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/lovable-uploads/a74fa0fe-dcfd-4a56-97be-fb7c6ed21039.png" 
+            src="/lovable-uploads/mannequin.png" 
             alt="Mannequin"
             className="w-full h-full object-contain" 
           />
         </div>
 
-        {/* Clothing sections with uniform background and hover effect */}
+        {/* Interactive clothing zones */}
         
-        {/* Hat position - first rectangle */}
+        {/* Hat zone - top of mannequin */}
         <div 
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 z-30 w-[140px] h-[140px] cursor-pointer 
-                    border-dashed border-green-500 rounded-md bg-white/50 hover:bg-green-100 transition-colors"
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 z-30 
+                    w-[100px] h-[80px] cursor-pointer 
+                    border-2 border-dashed border-transparent 
+                    bg-white/30 hover:bg-green-100/50 hover:border-green-500 
+                    transition-colors rounded-md"
           onClick={() => selectedItems.hat && showDetails(selectedItems.hat, 'hat')}
         >
           {selectedItems.hat && (
-            <div className="w-full h-full rounded-md overflow-hidden">
+            <div className="w-full h-full rounded-md overflow-hidden animate-item-change">
               <img 
                 src={selectedItems.hat.image} 
                 alt={selectedItems.hat.name}
@@ -80,16 +83,24 @@ const Mannequin = ({
               />
             </div>
           )}
+          {!selectedItems.hat && (
+            <div className="w-full h-full flex items-center justify-center">
+              <span className="text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded">Hat</span>
+            </div>
+          )}
         </div>
         
-        {/* Top position - second rectangle */}
+        {/* Top zone - torso area */}
         <div 
-          className="absolute top-[140px] left-1/2 transform -translate-x-1/2 z-20 w-[280px] h-[280px] cursor-pointer 
-                    border-dashed border-green-500 rounded-md bg-white/50 hover:bg-green-100 transition-colors"
+          className="absolute top-[80px] left-1/2 transform -translate-x-1/2 z-20 
+                    w-[180px] h-[200px] cursor-pointer 
+                    border-2 border-dashed border-transparent 
+                    bg-white/30 hover:bg-green-100/50 hover:border-green-500 
+                    transition-colors rounded-md"
           onClick={() => selectedItems.top && showDetails(selectedItems.top, 'top')}
         >
           {selectedItems.top && (
-            <div className="w-full h-full rounded-md overflow-hidden">
+            <div className="w-full h-full rounded-md overflow-hidden animate-item-change">
               <img 
                 src={selectedItems.top.image} 
                 alt={selectedItems.top.name}
@@ -97,16 +108,24 @@ const Mannequin = ({
               />
             </div>
           )}
+          {!selectedItems.top && (
+            <div className="w-full h-full flex items-center justify-center">
+              <span className="text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded">Top</span>
+            </div>
+          )}
         </div>
         
-        {/* Bottom position - third rectangle */}
+        {/* Bottom zone - waist to ankles */}
         <div 
-          className="absolute top-[420px] left-1/2 transform -translate-x-1/2 w-[280px] h-[180px] cursor-pointer 
-                    border-dashed border-green-500 rounded-md bg-white/50 hover:bg-green-100 transition-colors"
+          className="absolute top-[280px] left-1/2 transform -translate-x-1/2 
+                    w-[180px] h-[220px] cursor-pointer 
+                    border-2 border-dashed border-transparent 
+                    bg-white/30 hover:bg-green-100/50 hover:border-green-500 
+                    transition-colors rounded-md"
           onClick={() => selectedItems.bottom && showDetails(selectedItems.bottom, 'bottom')}
         >
           {selectedItems.bottom && (
-            <div className="w-full h-full rounded-md overflow-hidden">
+            <div className="w-full h-full rounded-md overflow-hidden animate-item-change">
               <img 
                 src={selectedItems.bottom.image} 
                 alt={selectedItems.bottom.name}
@@ -114,16 +133,24 @@ const Mannequin = ({
               />
             </div>
           )}
+          {!selectedItems.bottom && (
+            <div className="w-full h-full flex items-center justify-center">
+              <span className="text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded">Bottom</span>
+            </div>
+          )}
         </div>
         
-        {/* Shoes position - fourth rectangle */}
+        {/* Shoes zone - feet */}
         <div 
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[200px] h-[80px] cursor-pointer 
-                    border-dashed border-green-500 rounded-md bg-white/50 hover:bg-green-100 transition-colors"
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 
+                    w-[180px] h-[80px] cursor-pointer 
+                    border-2 border-dashed border-transparent 
+                    bg-white/30 hover:bg-green-100/50 hover:border-green-500 
+                    transition-colors rounded-md"
           onClick={() => selectedItems.shoe && showDetails(selectedItems.shoe, 'shoe')}
         >
           {selectedItems.shoe && (
-            <div className="w-full h-full rounded-md overflow-hidden">
+            <div className="w-full h-full rounded-md overflow-hidden animate-item-change">
               <img 
                 src={selectedItems.shoe.image} 
                 alt={selectedItems.shoe.name}
@@ -131,32 +158,12 @@ const Mannequin = ({
               />
             </div>
           )}
+          {!selectedItems.shoe && (
+            <div className="w-full h-full flex items-center justify-center">
+              <span className="text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded">Shoes</span>
+            </div>
+          )}
         </div>
-
-        {/* Labels for empty sections */}
-        {!selectedItems.hat && (
-          <div className="absolute top-[60px] left-1/2 transform -translate-x-1/2 text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded z-40">
-            Hat
-          </div>
-        )}
-        
-        {!selectedItems.top && (
-          <div className="absolute top-[280px] left-1/2 transform -translate-x-1/2 text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded z-40">
-            Top
-          </div>
-        )}
-        
-        {!selectedItems.bottom && (
-          <div className="absolute top-[500px] left-1/2 transform -translate-x-1/2 text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded z-40">
-            Bottom
-          </div>
-        )}
-        
-        {!selectedItems.shoe && (
-          <div className="absolute bottom-[40px] left-1/2 transform -translate-x-1/2 text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded z-40">
-            Shoes
-          </div>
-        )}
       </div>
       
       {/* Item Details Panel */}

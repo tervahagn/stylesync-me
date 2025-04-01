@@ -135,8 +135,8 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex flex-1 overflow-hidden">
-        {/* Items sidebar */}
-        <div className="w-full md:w-[450px] lg:w-[500px] border-r">
+        {/* Items sidebar - 40% on desktop */}
+        <div className="w-full md:w-2/5 border-r overflow-hidden">
           <ItemsSidebar 
             items={clothingItems} 
             selected={selectedItems} 
@@ -148,8 +148,19 @@ const Index = () => {
           />
         </div>
         
-        {/* Mannequin display */}
-        <div className="flex-1 overflow-y-auto bg-gray-50 p-6">
+        {/* Mannequin display - 60% on desktop */}
+        <div className="hidden md:flex flex-1 overflow-y-auto bg-gray-50 p-6">
+          <Mannequin 
+            selectedItems={selectedItems} 
+            selectedSizes={selectedSizes}
+            selectedColors={selectedColors}
+            onSizeChange={handleSizeChange}
+            onColorChange={handleColorChange}
+          />
+        </div>
+        
+        {/* Mobile view for mannequin (shown only on small screens) */}
+        <div className="md:hidden w-full bg-gray-50 p-4 mt-4">
           <Mannequin 
             selectedItems={selectedItems} 
             selectedSizes={selectedSizes}
