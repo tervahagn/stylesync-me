@@ -63,11 +63,12 @@ const Mannequin = ({
           />
         </div>
 
-        {/* Clothing sections with dashed borders matching the image */}
+        {/* Clothing sections with uniform background and hover effect */}
         
-        {/* Hat position */}
+        {/* Hat position - first rectangle */}
         <div 
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 z-30 w-[140px] h-[140px] cursor-pointer border-dashed border-green-500 rounded-md"
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 z-30 w-[140px] h-[140px] cursor-pointer 
+                    border-dashed border-green-500 rounded-md bg-white/50 hover:bg-green-100 transition-colors"
           onClick={() => selectedItems.hat && showDetails(selectedItems.hat, 'hat')}
         >
           {selectedItems.hat && (
@@ -81,9 +82,10 @@ const Mannequin = ({
           )}
         </div>
         
-        {/* Top position */}
+        {/* Top position - second rectangle */}
         <div 
-          className="absolute top-[140px] left-1/2 transform -translate-x-1/2 z-20 w-[280px] h-[280px] cursor-pointer border-dashed border-green-500 rounded-md"
+          className="absolute top-[140px] left-1/2 transform -translate-x-1/2 z-20 w-[280px] h-[280px] cursor-pointer 
+                    border-dashed border-green-500 rounded-md bg-white/50 hover:bg-green-100 transition-colors"
           onClick={() => selectedItems.top && showDetails(selectedItems.top, 'top')}
         >
           {selectedItems.top && (
@@ -97,9 +99,10 @@ const Mannequin = ({
           )}
         </div>
         
-        {/* Bottom position */}
+        {/* Bottom position - third rectangle */}
         <div 
-          className="absolute top-[420px] left-1/2 transform -translate-x-1/2 w-[280px] h-[280px] cursor-pointer border-dashed border-green-500 rounded-md"
+          className="absolute top-[420px] left-1/2 transform -translate-x-1/2 w-[280px] h-[180px] cursor-pointer 
+                    border-dashed border-green-500 rounded-md bg-white/50 hover:bg-green-100 transition-colors"
           onClick={() => selectedItems.bottom && showDetails(selectedItems.bottom, 'bottom')}
         >
           {selectedItems.bottom && (
@@ -113,9 +116,10 @@ const Mannequin = ({
           )}
         </div>
         
-        {/* Shoes position */}
+        {/* Shoes position - fourth rectangle */}
         <div 
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[200px] h-[80px] cursor-pointer border-dashed border-green-500 rounded-md"
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[200px] h-[80px] cursor-pointer 
+                    border-dashed border-green-500 rounded-md bg-white/50 hover:bg-green-100 transition-colors"
           onClick={() => selectedItems.shoe && showDetails(selectedItems.shoe, 'shoe')}
         >
           {selectedItems.shoe && (
@@ -143,7 +147,7 @@ const Mannequin = ({
         )}
         
         {!selectedItems.bottom && (
-          <div className="absolute top-[560px] left-1/2 transform -translate-x-1/2 text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded z-40">
+          <div className="absolute top-[500px] left-1/2 transform -translate-x-1/2 text-sm text-gray-500 font-medium bg-white/80 px-2 py-1 rounded z-40">
             Bottom
           </div>
         )}
