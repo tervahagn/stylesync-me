@@ -4,9 +4,11 @@ import { clothingItems, ClothingItem } from "@/data/clothingItems";
 import ItemsSidebar from "@/components/ItemsSidebar";
 import Mannequin from "@/components/Mannequin";
 import { useToast } from "@/hooks/use-toast";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Index = () => {
   const { toast } = useToast();
+  const isMobile = useIsMobile();
   
   // State for selected items on mannequin
   const [selectedItems, setSelectedItems] = useState<{
@@ -134,8 +136,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="flex flex-1 overflow-hidden">
-        {/* Items sidebar - 40% on desktop */}
+      <main className="flex flex-1 flex-col md:flex-row overflow-hidden">
+        {/* Items sidebar - 40% on desktop, full width on mobile */}
         <div className="w-full md:w-2/5 border-r overflow-hidden">
           <ItemsSidebar 
             items={clothingItems} 
@@ -149,18 +151,7 @@ const Index = () => {
         </div>
         
         {/* Mannequin display - 60% on desktop */}
-        <div className="hidden md:flex flex-1 overflow-y-auto bg-gray-50 p-6">
-          <Mannequin 
-            selectedItems={selectedItems} 
-            selectedSizes={selectedSizes}
-            selectedColors={selectedColors}
-            onSizeChange={handleSizeChange}
-            onColorChange={handleColorChange}
-          />
-        </div>
-        
-        {/* Mobile view for mannequin (shown only on small screens) */}
-        <div className="md:hidden w-full bg-gray-50 p-4 mt-4">
+        <div className={`${isMobile ? 'w-full' : 'flex-1'} overflow-y-auto bg-gray-50 p-6`}>
           <Mannequin 
             selectedItems={selectedItems} 
             selectedSizes={selectedSizes}
