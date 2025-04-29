@@ -11,6 +11,16 @@ export interface ClothingItem {
   sizes: string[];
 }
 
+// Create an array of fictional brands
+const brands = [
+  "Meridian Apparel",
+  "Vanguard Collection",
+  "Blue Harbor",
+  "Streetwise",
+  "Apex Headwear",
+  "Trekker Footwear"
+];
+
 export const clothingItems: ClothingItem[] = [
   // Hats (Category 1)
   {
