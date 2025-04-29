@@ -16,7 +16,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 1,
     name: "Cap",
-    brand: "Urban Classics",
+    brand: "Apex Headwear",
     category: "hat",
     image: "/lovable-uploads/d51ca222-78b6-4cc0-83e6-76ed01cbc9f1.png",
     color: "black",
@@ -27,7 +27,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 2,
     name: "Hat",
-    brand: "Urban Classics",
+    brand: "Apex Headwear",
     category: "hat",
     image: "/lovable-uploads/7b7a8c51-c9f0-403b-a70b-23dbdb2d5d6b.png",
     color: "brown",
@@ -40,7 +40,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 3,
     name: "T-shirt",
-    brand: "Urban Classics",
+    brand: "Meridian Apparel",
     category: "top",
     image: "/lovable-uploads/2efcd59b-207f-4d16-a39f-6d552ada60df.png",
     color: "black",
@@ -51,7 +51,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 4,
     name: "Blazer",
-    brand: "Urban Classics",
+    brand: "Vanguard Collection",
     category: "top",
     image: "/lovable-uploads/2836a103-ea24-42bc-8dff-69a501377bd3.png",
     color: "black",
@@ -62,7 +62,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 5,
     name: "Cardigan",
-    brand: "Urban Classics",
+    brand: "Meridian Apparel",
     category: "top",
     image: "/lovable-uploads/2af903b0-7d86-4954-b7ad-11cef89966ce.png",
     color: "grey",
@@ -73,7 +73,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 6,
     name: "Denim Jacket",
-    brand: "Urban Classics",
+    brand: "Blue Harbor",
     category: "top",
     image: "/lovable-uploads/f90cc528-c60c-4e0e-b103-90772a313a86.png",
     color: "blue",
@@ -84,7 +84,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 7,
     name: "Hoodie",
-    brand: "Urban Classics",
+    brand: "Streetwise",
     category: "top",
     image: "/lovable-uploads/da767949-b16d-447c-8198-57e492c48153.png",
     color: "grey",
@@ -95,7 +95,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 8,
     name: "Leather Jacket",
-    brand: "Urban Classics",
+    brand: "Vanguard Collection",
     category: "top",
     image: "/lovable-uploads/3d06946b-659b-4cfd-a9ad-ec9d999c05cd.png",
     color: "burgundy",
@@ -106,7 +106,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 9,
     name: "Military Jacket",
-    brand: "Urban Classics",
+    brand: "Streetwise",
     category: "top",
     image: "/lovable-uploads/08e30bb5-91fe-4fa1-b9c9-a8bab87cb939.png",
     color: "khaki",
@@ -117,7 +117,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 10,
     name: "Sport Jacket",
-    brand: "Urban Classics",
+    brand: "Apex Headwear",
     category: "top",
     image: "/lovable-uploads/0fc56108-127c-4b53-82ac-fd5a555e7b87.png",
     color: "green",
@@ -128,7 +128,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 11,
     name: "Sweater",
-    brand: "Urban Classics",
+    brand: "Blue Harbor",
     category: "top",
     image: "/lovable-uploads/016d4ec8-3504-4abc-8adc-669a41683906.png",
     color: "beige",
@@ -139,7 +139,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 12,
     name: "T-shirt",
-    brand: "Urban Classics",
+    brand: "Meridian Apparel",
     category: "top",
     image: "/lovable-uploads/772f6b73-5ca6-4991-ab4d-340a86574141.png",
     color: "white - graphic",
@@ -152,7 +152,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 13,
     name: "Chinos",
-    brand: "Urban Classics",
+    brand: "Vanguard Collection",
     category: "bottom",
     image: "/lovable-uploads/5f26fc30-e48c-4024-8498-f342c25075e6.png",
     color: "grey",
@@ -163,7 +163,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 14,
     name: "Jeans",
-    brand: "Urban Classics",
+    brand: "Blue Harbor",
     category: "bottom",
     image: "/lovable-uploads/3112dd24-15e4-4462-a0c0-76fc54e79c21.png",
     color: "blue",
@@ -174,7 +174,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 15,
     name: "Leggings",
-    brand: "Urban Classics",
+    brand: "Meridian Apparel",
     category: "bottom",
     image: "/lovable-uploads/a3fa2566-aef6-42d2-abd4-a94d656f2b2e.png",
     color: "black",
@@ -185,7 +185,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 16,
     name: "Shorts",
-    brand: "Urban Classics",
+    brand: "Streetwise",
     category: "bottom",
     image: "/lovable-uploads/7a6fe5ae-0205-4da5-b829-94e2ee3c6197.png",
     color: "blue",
@@ -196,7 +196,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 17,
     name: "Sweatpants",
-    brand: "Urban Classics",
+    brand: "Streetwise",
     category: "bottom",
     image: "/lovable-uploads/f8da9d03-f6ca-4a0c-9ef7-51b33baf867f.png",
     color: "grey",
@@ -209,7 +209,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 18,
     name: "Boots",
-    brand: "Urban Classics",
+    brand: "Trekker Footwear",
     category: "shoe",
     image: "/lovable-uploads/b8c57124-2aba-4a24-9f5f-cf6dad7092cd.png",
     color: "coffee",
@@ -220,7 +220,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 19,
     name: "Flipflops",
-    brand: "Urban Classics",
+    brand: "Trekker Footwear",
     category: "shoe",
     image: "/lovable-uploads/9aea5888-a684-4e47-a070-6c5ed7cce20b.png",
     color: "green",
@@ -231,7 +231,7 @@ export const clothingItems: ClothingItem[] = [
   {
     id: 20,
     name: "Sneakers",
-    brand: "Urban Classics",
+    brand: "Trekker Footwear",
     category: "shoe",
     image: "/lovable-uploads/e449b3fd-0818-4733-b563-116a5448c598.png",
     color: "black",

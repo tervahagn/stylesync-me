@@ -3,6 +3,7 @@ import { X } from "lucide-react";
 import { ClothingItem } from "@/data/clothingItems";
 import { Button } from "./ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { AspectRatio } from "./ui/aspect-ratio";
 
 interface ItemDetailProps {
   item: ClothingItem;
@@ -33,7 +34,15 @@ const ItemDetail = ({
       purple: "bg-purple-500",
       pink: "bg-pink-500",
       gray: "bg-gray-500",
-      brown: "bg-amber-800"
+      grey: "bg-gray-500",
+      brown: "bg-amber-800",
+      navy: "bg-blue-900",
+      beige: "bg-amber-100",
+      khaki: "bg-amber-300",
+      burgundy: "bg-red-800",
+      coffee: "bg-amber-800",
+      tan: "bg-amber-200",
+      olive: "bg-olive-600"
     };
     
     return colorMap[color] || "bg-gray-300";
@@ -53,15 +62,24 @@ const ItemDetail = ({
         </Button>
       </div>
 
-      <div className="mb-4">
-        <img 
-          src={item.image} 
-          alt={item.name} 
-          className="w-full h-auto object-cover rounded-md"
-        />
+      <div className="mb-4 bg-gray-50 rounded-md overflow-hidden">
+        <AspectRatio ratio={1} className="w-full">
+          <img 
+            src={item.image} 
+            alt={`${item.name} in ${item.color} by ${item.brand}`}
+            className="w-full h-full object-contain p-2"
+          />
+        </AspectRatio>
       </div>
       
       <div className="space-y-4">
+        <div className="text-sm font-medium">
+          {item.brand}
+        </div>
+        <div className="text-lg font-bold">
+          {item.name} - {item.color.charAt(0).toUpperCase() + item.color.slice(1)}
+        </div>
+        
         <div className="flex justify-between items-center">
           <div>Color</div>
           <div className="flex items-center">
