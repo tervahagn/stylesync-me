@@ -197,10 +197,10 @@ export const clothingItems: ClothingItem[] = [
     name: "Shorts",
     brand: "Streetwise",
     category: "bottom",
-    image: "/lovable-uploads/9a46ed6a-e5a0-484f-92ab-73dd84ccabca.png",
-    color: "blue",
+    image: "/lovable-uploads/9b0ecac0-fe78-434d-9d7f-72fd35f9c68c.png",
+    color: "navy",
     price: 25,
-    colors: ["blue", "black", "grey"],
+    colors: ["navy", "black", "grey"],
     sizes: ["S", "M", "L", "XL"]
   },
   {
@@ -232,7 +232,7 @@ export const clothingItems: ClothingItem[] = [
     name: "Flipflops",
     brand: "Trekker Footwear",
     category: "shoe",
-    image: "/lovable-uploads/15e0618a-0d97-4364-983d-e826035380ad.png",
+    image: "/lovable-uploads/74b91e6d-f318-4bf3-a706-ad5622b487d0.png",
     color: "green",
     price: 20,
     colors: ["green", "black", "blue"],
