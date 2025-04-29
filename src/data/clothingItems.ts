@@ -12,143 +12,231 @@ export interface ClothingItem {
 }
 
 export const clothingItems: ClothingItem[] = [
-  // Tops
+  // Hats (Category 1)
   {
     id: 1,
-    name: "T-Shirt",
-    brand: "Jack & Jones",
-    category: "top",
-    image: "/lovable-uploads/ecf69992-c0a6-4078-b496-b935cc9345cf.png",
-    color: "white",
-    price: 19.99,
-    colors: ["white", "black", "gray"],
-    sizes: ["XS", "S", "M", "L", "XL"]
+    name: "Cap",
+    brand: "Urban Classics",
+    category: "hat",
+    image: "/lovable-uploads/d51ca222-78b6-4cc0-83e6-76ed01cbc9f1.png",
+    color: "black",
+    price: 20,
+    colors: ["black", "navy", "red"],
+    sizes: ["S", "M", "L"]
   },
   {
     id: 2,
-    name: "Varsity Jacket",
-    brand: "Jack & Jones",
-    category: "top",
-    image: "/lovable-uploads/6f579f70-c4c5-4642-bad1-8bac528e2c11.png",
-    color: "black",
-    price: 79.99,
-    colors: ["black", "navy", "burgundy"],
-    sizes: ["XS", "S", "M", "L", "XL"]
+    name: "Hat",
+    brand: "Urban Classics",
+    category: "hat",
+    image: "/lovable-uploads/7b7a8c51-c9f0-403b-a70b-23dbdb2d5d6b.png",
+    color: "brown",
+    price: 35,
+    colors: ["brown", "black", "tan"],
+    sizes: ["M", "L", "XL"]
   },
+  
+  // Tops (Category 2)
   {
     id: 3,
-    name: "Hoodie",
-    brand: "Jack & Jones",
+    name: "T-shirt",
+    brand: "Urban Classics",
     category: "top",
-    image: "/lovable-uploads/8d024b60-63f9-4960-893d-40abce89db0f.png",
-    color: "gray",
-    price: 39.99,
-    colors: ["gray", "black", "blue"],
-    sizes: ["XS", "S", "M", "L", "XL"]
+    image: "/lovable-uploads/2efcd59b-207f-4d16-a39f-6d552ada60df.png",
+    color: "black",
+    price: 25,
+    colors: ["black", "white", "grey"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 4,
-    name: "Sweatshirt",
-    brand: "Jack & Jones",
+    name: "Blazer",
+    brand: "Urban Classics",
     category: "top",
-    image: "/lovable-uploads/fa3b293b-a9da-48e5-b51c-84813d6f1be1.png",
-    color: "brown",
-    price: 34.99,
-    colors: ["brown", "black", "green"],
-    sizes: ["XS", "S", "M", "L", "XL"]
+    image: "/lovable-uploads/2836a103-ea24-42bc-8dff-69a501377bd3.png",
+    color: "black",
+    price: 120,
+    colors: ["black", "navy", "grey"],
+    sizes: ["S", "M", "L", "XL", "XXL"]
   },
   {
     id: 5,
-    name: "Puffer Vest",
-    brand: "Jack & Jones",
+    name: "Cardigan",
+    brand: "Urban Classics",
     category: "top",
-    image: "/lovable-uploads/060a1e17-69fd-40bf-92b7-b5f5a7c11b42.png",
-    color: "beige",
-    price: 49.99,
-    colors: ["beige", "black", "navy"],
-    sizes: ["XS", "S", "M", "L", "XL"]
+    image: "/lovable-uploads/2af903b0-7d86-4954-b7ad-11cef89966ce.png",
+    color: "grey",
+    price: 60,
+    colors: ["grey", "black", "navy"],
+    sizes: ["S", "M", "L", "XL"]
   },
-  
-  // Bottoms
   {
     id: 6,
-    name: "Wide Jeans",
-    brand: "Jack & Jones",
-    category: "bottom",
-    image: "/lovable-uploads/175af81e-b30f-4422-8547-d90f7906e55a.png",
+    name: "Denim Jacket",
+    brand: "Urban Classics",
+    category: "top",
+    image: "/lovable-uploads/f90cc528-c60c-4e0e-b103-90772a313a86.png",
     color: "blue",
-    price: 49.99,
-    colors: ["blue", "black", "gray"],
-    sizes: ["28", "30", "32", "34", "36"]
+    price: 80,
+    colors: ["blue", "black", "light blue"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 7,
-    name: "Chino Shorts",
-    brand: "Jack & Jones",
-    category: "bottom",
-    image: "/lovable-uploads/ce98ac9b-ded3-44c1-9d27-cbb21d217371.png",
-    color: "red",
-    price: 29.99,
-    colors: ["red", "beige", "navy"],
-    sizes: ["28", "30", "32", "34", "36"]
+    name: "Hoodie",
+    brand: "Urban Classics",
+    category: "top",
+    image: "/lovable-uploads/da767949-b16d-447c-8198-57e492c48153.png",
+    color: "grey",
+    price: 50,
+    colors: ["grey", "black", "navy"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 8,
-    name: "Boxer Shorts",
-    brand: "Jack & Jones",
-    category: "bottom",
-    image: "/lovable-uploads/a3dbf1e2-55c0-453d-8829-79962bcedf48.png",
-    color: "black",
-    price: 14.99,
-    colors: ["black", "gray", "navy"],
+    name: "Leather Jacket",
+    brand: "Urban Classics",
+    category: "top",
+    image: "/lovable-uploads/3d06946b-659b-4cfd-a9ad-ec9d999c05cd.png",
+    color: "burgundy",
+    price: 150,
+    colors: ["burgundy", "black", "brown"],
     sizes: ["S", "M", "L", "XL"]
   },
-  
-  // Shoes
   {
     id: 9,
-    name: "Boots",
-    brand: "Jack & Jones",
-    category: "shoe",
-    image: "/lovable-uploads/fe940d74-d0b3-4199-a45a-1755742cd8b6.png",
-    color: "brown",
-    price: 79.99,
-    colors: ["brown", "black", "tan"],
-    sizes: ["7", "8", "9", "10", "11"]
+    name: "Military Jacket",
+    brand: "Urban Classics",
+    category: "top",
+    image: "/lovable-uploads/08e30bb5-91fe-4fa1-b9c9-a8bab87cb939.png",
+    color: "khaki",
+    price: 90,
+    colors: ["khaki", "olive", "black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 10,
-    name: "Leather Boots",
-    brand: "Jack & Jones",
-    category: "shoe",
-    image: "/lovable-uploads/fd16a222-e8a3-4708-9cd8-b7b884feb27e.png",
-    color: "brown",
-    price: 89.99,
-    colors: ["brown", "black", "burgundy"],
-    sizes: ["7", "8", "9", "10", "11"]
+    name: "Sport Jacket",
+    brand: "Urban Classics",
+    category: "top",
+    image: "/lovable-uploads/0fc56108-127c-4b53-82ac-fd5a555e7b87.png",
+    color: "green",
+    price: 70,
+    colors: ["green", "black", "blue"],
+    sizes: ["S", "M", "L", "XL"]
   },
-  
-  // Hats
   {
     id: 11,
-    name: "Beanie",
-    brand: "Jack & Jones",
-    category: "hat",
-    image: "/lovable-uploads/4bcc9112-90d5-49e6-95f6-3789012fc97e.png",
-    color: "navy",
-    price: 19.99,
-    colors: ["navy", "black", "gray"],
-    sizes: ["One Size"]
+    name: "Sweater",
+    brand: "Urban Classics",
+    category: "top",
+    image: "/lovable-uploads/016d4ec8-3504-4abc-8adc-669a41683906.png",
+    color: "beige",
+    price: 55,
+    colors: ["beige", "grey", "black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 12,
-    name: "Cap",
-    brand: "Jack & Jones",
-    category: "hat",
-    image: "/lovable-uploads/da426b30-60f0-4646-af8c-3fb0bf139110.png",
-    color: "red",
-    price: 22.99,
-    colors: ["red", "black", "blue"],
-    sizes: ["S/M", "L/XL"]
+    name: "T-shirt",
+    brand: "Urban Classics",
+    category: "top",
+    image: "/lovable-uploads/772f6b73-5ca6-4991-ab4d-340a86574141.png",
+    color: "white - graphic",
+    price: 30,
+    colors: ["white", "black", "grey"],
+    sizes: ["S", "M", "L", "XL"]
+  },
+  
+  // Bottoms (Category 3)
+  {
+    id: 13,
+    name: "Chinos",
+    brand: "Urban Classics",
+    category: "bottom",
+    image: "/lovable-uploads/5f26fc30-e48c-4024-8498-f342c25075e6.png",
+    color: "grey",
+    price: 45,
+    colors: ["grey", "beige", "navy"],
+    sizes: ["30", "32", "34", "36"]
+  },
+  {
+    id: 14,
+    name: "Jeans",
+    brand: "Urban Classics",
+    category: "bottom",
+    image: "/lovable-uploads/3112dd24-15e4-4462-a0c0-76fc54e79c21.png",
+    color: "blue",
+    price: 50,
+    colors: ["blue", "black", "grey"],
+    sizes: ["30", "32", "34", "36"]
+  },
+  {
+    id: 15,
+    name: "Leggings",
+    brand: "Urban Classics",
+    category: "bottom",
+    image: "/lovable-uploads/a3fa2566-aef6-42d2-abd4-a94d656f2b2e.png",
+    color: "black",
+    price: 35,
+    colors: ["black", "grey", "navy"],
+    sizes: ["XS", "S", "M", "L"]
+  },
+  {
+    id: 16,
+    name: "Shorts",
+    brand: "Urban Classics",
+    category: "bottom",
+    image: "/lovable-uploads/7a6fe5ae-0205-4da5-b829-94e2ee3c6197.png",
+    color: "blue",
+    price: 25,
+    colors: ["blue", "black", "grey"],
+    sizes: ["S", "M", "L", "XL"]
+  },
+  {
+    id: 17,
+    name: "Sweatpants",
+    brand: "Urban Classics",
+    category: "bottom",
+    image: "/lovable-uploads/f8da9d03-f6ca-4a0c-9ef7-51b33baf867f.png",
+    color: "grey",
+    price: 40,
+    colors: ["grey", "black", "navy"],
+    sizes: ["S", "M", "L", "XL"]
+  },
+  
+  // Shoes (Category 4)
+  {
+    id: 18,
+    name: "Boots",
+    brand: "Urban Classics",
+    category: "shoe",
+    image: "/lovable-uploads/b8c57124-2aba-4a24-9f5f-cf6dad7092cd.png",
+    color: "coffee",
+    price: 95,
+    colors: ["coffee", "black", "tan"],
+    sizes: ["7", "8", "9", "10", "11"]
+  },
+  {
+    id: 19,
+    name: "Flipflops",
+    brand: "Urban Classics",
+    category: "shoe",
+    image: "/lovable-uploads/9aea5888-a684-4e47-a070-6c5ed7cce20b.png",
+    color: "green",
+    price: 20,
+    colors: ["green", "black", "blue"],
+    sizes: ["7", "8", "9", "10"]
+  },
+  {
+    id: 20,
+    name: "Sneakers",
+    brand: "Urban Classics",
+    category: "shoe",
+    image: "/lovable-uploads/e449b3fd-0818-4733-b563-116a5448c598.png",
+    color: "black",
+    price: 75,
+    colors: ["black", "white", "grey"],
+    sizes: ["7", "8", "9", "10", "11"]
   }
 ];
