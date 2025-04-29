@@ -3,6 +3,7 @@ import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ClothingItem } from "@/data/clothingItems";
+import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
 interface ClothingCardProps {
   item: ClothingItem;
@@ -27,13 +28,24 @@ const ClothingCard = ({
       onClick={() => onSelect(item)}
     >
       <CardContent className="p-0">
-        <div className="h-36 w-full overflow-hidden">
-          <img 
-            src={item.image} 
-            alt={item.name}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <HoverCard>
+          <HoverCardTrigger asChild>
+            <div className="h-36 w-full overflow-hidden">
+              <img 
+                src={item.image} 
+                alt={item.name}
+                className="w-full h-full object-contain transition-transform hover:scale-105"
+              />
+            </div>
+          </HoverCardTrigger>
+          <HoverCardContent className="p-0 border-0 shadow-xl">
+            <img 
+              src={item.image}
+              alt={item.name}
+              className="w-full h-full object-contain rounded-md"
+            />
+          </HoverCardContent>
+        </HoverCard>
         {onToggleFavorite && (
           <Button 
             variant="ghost" 
