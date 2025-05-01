@@ -57,10 +57,10 @@ const Mannequin = ({
       </div>
       
       <div className="relative h-[600px] w-[340px]">
-        {/* Mannequin base image */}
-        <div className="absolute inset-0 z-0 opacity-50 grayscale">
+        {/* Mannequin base image - updated to use the new image */}
+        <div className="absolute inset-0 z-0">
           <img 
-            src="/lovable-uploads/mannequin.png" 
+            src="/lovable-uploads/1eb7a92a-4a9c-46c8-b472-7e9bd0402a21.png" 
             alt="Mannequin"
             className="w-full h-full object-contain" 
             aria-label="Mannequin silhouette"
