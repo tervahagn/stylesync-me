@@ -6,8 +6,6 @@ import ClothingCard from "./ClothingCard";
 import { Shirt, UserRoundCog, Footprints, ShoppingBag, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "./ui/pagination";
 
 interface ItemsSidebarProps {
   items: ClothingItem[];
@@ -24,8 +22,6 @@ interface ItemsSidebarProps {
   onClearAll: () => void;
 }
 
-const ITEMS_PER_PAGE = 6;
-
 const ItemsSidebar = ({
   items,
   selected,
@@ -39,7 +35,6 @@ const ItemsSidebar = ({
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [selectedSize, setSelectedSize] = useState<string>("all_sizes");
   const [selectedColor, setSelectedColor] = useState<string>("all_colors");
-  const [currentPage, setCurrentPage] = useState<number>(1);
 
   // Filter items by category
   const getItemsByCategory = (category: string) => {
@@ -67,15 +62,6 @@ const ItemsSidebar = ({
     return filteredItems;
   };
 
-  // Get current items for pagination
-  const getCurrentItems = (category: string) => {
-    const filteredItems = getItemsByCategory(category);
-    const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
-    const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
-    
-    return filteredItems.slice(indexOfFirstItem, indexOfLastItem);
-  };
-
   const isSelected = (item: ClothingItem) => {
     if (selected[item.category as keyof typeof selected]?.id === item.id) {
       return true;
@@ -96,30 +82,6 @@ const ItemsSidebar = ({
   const allColors = Array.from(
     new Set(items.flatMap(item => item.colors))
   );
-  
-  // Calculate total pages
-  const getTotalPages = (category: string) => {
-    const filteredItems = getItemsByCategory(category);
-    return Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
-  };
-
-  // Handle page change
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-  };
-
-  // Reset page when category changes
-  const handleCategoryChange = (category: string) => {
-    setCurrentPage(1);
-    setActiveCategory(category);
-  };
-
-  // Load more items
-  const handleLoadMore = () => {
-    if (currentPage < getTotalPages(activeCategory)) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
 
   return (
     <div className="w-full h-full flex flex-col overflow-hidden">
@@ -162,7 +124,7 @@ const ItemsSidebar = ({
         </div>
       </div>
       
-      <Tabs defaultValue="top" className="flex-1 flex flex-col" onValueChange={handleCategoryChange}>
+      <Tabs defaultValue="top" className="flex-1 flex flex-col" onValueChange={setActiveCategory}>
         <div className="border-b">
           <TabsList className="w-full justify-start h-auto p-0 bg-transparent">
             <TabsTrigger value="top" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none data-[state=active]:shadow-none px-4 py-2">
@@ -186,9 +148,9 @@ const ItemsSidebar = ({
 
         <div className="flex-1 overflow-y-auto">
           {["top", "bottom", "shoe", "hat"].map((category) => (
-            <TabsContent key={category} value={category} className="h-full m-0 p-4 flex flex-col">
-              <div className="grid grid-cols-2 gap-4">
-                {getCurrentItems(category).map((item) => (
+            <TabsContent key={category} value={category} className="h-full m-0 p-4">
+              <div className="grid grid-cols-2 gap-4 pb-6">
+                {getItemsByCategory(category).map((item) => (
                   <ClothingCard
                     key={item.id}
                     item={item}
@@ -198,56 +160,6 @@ const ItemsSidebar = ({
                     isFavorite={isFavorite(item)}
                   />
                 ))}
-              </div>
-              
-              {/* Pagination */}
-              <div className="mt-4 flex flex-col items-center">
-                {getItemsByCategory(category).length > ITEMS_PER_PAGE && (
-                  <>
-                    <Pagination className="mb-2">
-                      <PaginationContent>
-                        {currentPage > 1 && (
-                          <PaginationItem>
-                            <PaginationPrevious 
-                              onClick={() => handlePageChange(currentPage - 1)} 
-                              className="cursor-pointer"
-                            />
-                          </PaginationItem>
-                        )}
-                        
-                        {Array.from({ length: getTotalPages(category) }).map((_, index) => (
-                          <PaginationItem key={index}>
-                            <PaginationLink
-                              onClick={() => handlePageChange(index + 1)}
-                              isActive={currentPage === index + 1}
-                              className="cursor-pointer"
-                            >
-                              {index + 1}
-                            </PaginationLink>
-                          </PaginationItem>
-                        ))}
-                        
-                        {currentPage < getTotalPages(category) && (
-                          <PaginationItem>
-                            <PaginationNext 
-                              onClick={() => handlePageChange(currentPage + 1)}
-                              className="cursor-pointer" 
-                            />
-                          </PaginationItem>
-                        )}
-                      </PaginationContent>
-                    </Pagination>
-                    
-                    <Button
-                      variant="outline"
-                      onClick={handleLoadMore}
-                      className="w-full mb-4"
-                      disabled={currentPage >= getTotalPages(category)}
-                    >
-                      {currentPage >= getTotalPages(category) ? "All Items Loaded" : "Load More"}
-                    </Button>
-                  </>
-                )}
               </div>
             </TabsContent>
           ))}
