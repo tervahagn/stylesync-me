@@ -56,7 +56,7 @@ const Mannequin = ({
         <p className="text-gray-500">Try on different items to see how they look</p>
       </div>
       
-      <div className="relative h-[600px] w-[340px]">
+      <div className="relative h-[800px] w-[400px]">
         {/* Mannequin base image */}
         <div className="absolute inset-0 z-0 opacity-80">
           <img 
@@ -67,14 +67,14 @@ const Mannequin = ({
           />
         </div>
 
-        {/* Interactive clothing zones */}
+        {/* Interactive clothing zones with proper z-index layering */}
         
-        {/* Hat zone - top of mannequin */}
+        {/* Hat zone - top of mannequin (highest z-index: 400) */}
         <div 
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 z-30 
-                    w-[100px] h-[80px] cursor-pointer 
-                    border-2 border-dashed border-green-600
-                    hover:bg-green-200/50 transition-colors duration-300
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 z-[400] 
+                    w-[150px] h-[120px] cursor-pointer 
+                    border-2 border-transparent hover:border-dashed hover:border-green-400
+                    hover:bg-green-200/30 transition-colors duration-300
                     rounded-md flex items-center justify-center"
           onClick={() => selectedItems.hat && showDetails(selectedItems.hat, 'hat')}
           aria-label="Head zone for hats"
@@ -88,18 +88,18 @@ const Mannequin = ({
               />
             </div>
           ) : (
-            <div className="bg-gray-200 px-2 py-1 rounded text-sm text-gray-600">
+            <div className="bg-gray-200/70 px-2 py-1 rounded text-sm text-gray-600">
               Hat
             </div>
           )}
         </div>
         
-        {/* Top zone - torso area */}
+        {/* Top zone - torso area (z-index: 300) */}
         <div 
-          className="absolute top-[80px] left-1/2 transform -translate-x-1/2 z-20 
-                    w-[150px] h-[200px] cursor-pointer 
-                    border-2 border-dashed border-green-600
-                    hover:bg-green-200/50 transition-colors duration-300 
+          className="absolute top-[100px] left-1/2 transform -translate-x-1/2 z-[300] 
+                    w-[350px] h-[250px] cursor-pointer 
+                    border-2 border-transparent hover:border-dashed hover:border-green-400
+                    hover:bg-green-200/30 transition-colors duration-300 
                     rounded-md flex items-center justify-center"
           onClick={() => selectedItems.top && showDetails(selectedItems.top, 'top')}
           aria-label="Top zone for shirts"
@@ -113,18 +113,18 @@ const Mannequin = ({
               />
             </div>
           ) : (
-            <div className="bg-gray-200 px-2 py-1 rounded text-sm text-gray-600">
+            <div className="bg-gray-200/70 px-2 py-1 rounded text-sm text-gray-600">
               Top
             </div>
           )}
         </div>
         
-        {/* Bottom zone - waist to ankles */}
+        {/* Bottom zone - waist to ankles (z-index: 200) */}
         <div 
-          className="absolute top-[280px] left-1/2 transform -translate-x-1/2 z-10
-                    w-[150px] h-[250px] cursor-pointer 
-                    border-2 border-dashed border-green-600
-                    hover:bg-green-200/50 transition-colors duration-300
+          className="absolute top-[310px] left-1/2 transform -translate-x-1/2 z-[200]
+                    w-[350px] h-[250px] cursor-pointer 
+                    border-2 border-transparent hover:border-dashed hover:border-green-400
+                    hover:bg-green-200/30 transition-colors duration-300
                     rounded-md flex items-center justify-center"
           onClick={() => selectedItems.bottom && showDetails(selectedItems.bottom, 'bottom')}
           aria-label="Bottom zone for pants"
@@ -138,18 +138,18 @@ const Mannequin = ({
               />
             </div>
           ) : (
-            <div className="bg-gray-200 px-2 py-1 rounded text-sm text-gray-600">
+            <div className="bg-gray-200/70 px-2 py-1 rounded text-sm text-gray-600">
               Bottom
             </div>
           )}
         </div>
         
-        {/* Shoes zone - feet */}
+        {/* Shoes zone - feet (lowest z-index: 100) */}
         <div 
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 
-                    w-[100px] h-[80px] cursor-pointer 
-                    border-2 border-dashed border-green-600
-                    hover:bg-green-200/50 transition-colors duration-300
+          className="absolute bottom-[50px] left-1/2 transform -translate-x-1/2 z-[100]
+                    w-[350px] h-[100px] cursor-pointer 
+                    border-2 border-transparent hover:border-dashed hover:border-green-400
+                    hover:bg-green-200/30 transition-colors duration-300
                     rounded-md flex items-center justify-center"
           onClick={() => selectedItems.shoe && showDetails(selectedItems.shoe, 'shoe')}
           aria-label="Shoe zone for footwear"
@@ -163,7 +163,7 @@ const Mannequin = ({
               />
             </div>
           ) : (
-            <div className="bg-gray-200 px-2 py-1 rounded text-sm text-gray-600">
+            <div className="bg-gray-200/70 px-2 py-1 rounded text-sm text-gray-600">
               Shoes
             </div>
           )}
@@ -172,7 +172,7 @@ const Mannequin = ({
       
       {/* Item Details Panel */}
       {detailsItem.item && (
-        <div className={`${isMobile ? 'absolute bottom-4 left-4 right-4' : 'absolute top-[170px] right-4 w-[250px]'} z-40`}>
+        <div className={`${isMobile ? 'absolute bottom-4 left-4 right-4' : 'absolute top-[170px] right-4 w-[250px]'} z-[500]`}>
           <ItemDetail 
             item={detailsItem.item}
             onClose={closeDetails}
