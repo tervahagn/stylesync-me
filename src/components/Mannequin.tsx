@@ -56,7 +56,7 @@ const Mannequin = ({
         <p className="text-gray-500">Try on different items to see how they look</p>
       </div>
       
-      <div className="relative h-[800px] w-[400px]">
+      <div className="relative h-[600px] w-[340px]">
         {/* Mannequin base image */}
         <div className="absolute inset-0 z-0 opacity-80">
           <img 
@@ -71,16 +71,16 @@ const Mannequin = ({
         
         {/* Hat zone - top of mannequin */}
         <div 
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 z-[400] 
-                    w-[150px] h-[120px] cursor-pointer 
-                    border-2 border-dashed border-[#B2F7C1]
-                    hover:bg-green-200/30 transition-colors duration-300
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 z-30 
+                    w-[100px] h-[80px] cursor-pointer 
+                    border-2 border-dashed border-green-600
+                    hover:bg-green-200/50 transition-colors duration-300
                     rounded-md flex items-center justify-center"
           onClick={() => selectedItems.hat && showDetails(selectedItems.hat, 'hat')}
           aria-label="Head zone for hats"
         >
           {selectedItems.hat ? (
-            <div className="w-full h-full rounded-md overflow-hidden animate-fade-in">
+            <div className="w-full h-full rounded-md overflow-hidden animate-item-change">
               <img 
                 src={selectedItems.hat.image} 
                 alt={selectedItems.hat.name}
@@ -96,16 +96,16 @@ const Mannequin = ({
         
         {/* Top zone - torso area */}
         <div 
-          className="absolute top-[120px] left-1/2 transform -translate-x-1/2 z-[300] 
-                    w-[350px] h-[250px] cursor-pointer 
-                    border-2 border-dashed border-[#B2F7C1]
-                    hover:bg-green-200/30 transition-colors duration-300 
+          className="absolute top-[80px] left-1/2 transform -translate-x-1/2 z-20 
+                    w-[150px] h-[200px] cursor-pointer 
+                    border-2 border-dashed border-green-600
+                    hover:bg-green-200/50 transition-colors duration-300 
                     rounded-md flex items-center justify-center"
           onClick={() => selectedItems.top && showDetails(selectedItems.top, 'top')}
           aria-label="Top zone for shirts"
         >
           {selectedItems.top ? (
-            <div className="w-full h-full rounded-md overflow-hidden animate-fade-in">
+            <div className="w-full h-full rounded-md overflow-hidden animate-item-change">
               <img 
                 src={selectedItems.top.image} 
                 alt={selectedItems.top.name}
@@ -121,16 +121,16 @@ const Mannequin = ({
         
         {/* Bottom zone - waist to ankles */}
         <div 
-          className="absolute top-[350px] left-1/2 transform -translate-x-1/2 z-[200]
-                    w-[350px] h-[250px] cursor-pointer 
-                    border-2 border-dashed border-[#B2F7C1]
-                    hover:bg-green-200/30 transition-colors duration-300
+          className="absolute top-[280px] left-1/2 transform -translate-x-1/2 z-10
+                    w-[150px] h-[250px] cursor-pointer 
+                    border-2 border-dashed border-green-600
+                    hover:bg-green-200/50 transition-colors duration-300
                     rounded-md flex items-center justify-center"
           onClick={() => selectedItems.bottom && showDetails(selectedItems.bottom, 'bottom')}
           aria-label="Bottom zone for pants"
         >
           {selectedItems.bottom ? (
-            <div className="w-full h-full rounded-md overflow-hidden animate-fade-in">
+            <div className="w-full h-full rounded-md overflow-hidden animate-item-change">
               <img 
                 src={selectedItems.bottom.image} 
                 alt={selectedItems.bottom.name}
@@ -146,16 +146,16 @@ const Mannequin = ({
         
         {/* Shoes zone - feet */}
         <div 
-          className="absolute bottom-[50px] left-1/2 transform -translate-x-1/2 z-[100]
-                    w-[350px] h-[100px] cursor-pointer 
-                    border-2 border-dashed border-[#B2F7C1]
-                    hover:bg-green-200/30 transition-colors duration-300
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 
+                    w-[100px] h-[80px] cursor-pointer 
+                    border-2 border-dashed border-green-600
+                    hover:bg-green-200/50 transition-colors duration-300
                     rounded-md flex items-center justify-center"
           onClick={() => selectedItems.shoe && showDetails(selectedItems.shoe, 'shoe')}
           aria-label="Shoe zone for footwear"
         >
           {selectedItems.shoe ? (
-            <div className="w-full h-full rounded-md overflow-hidden animate-fade-in">
+            <div className="w-full h-full rounded-md overflow-hidden animate-item-change">
               <img 
                 src={selectedItems.shoe.image} 
                 alt={selectedItems.shoe.name}
@@ -172,7 +172,7 @@ const Mannequin = ({
       
       {/* Item Details Panel */}
       {detailsItem.item && (
-        <div className={`${isMobile ? 'absolute bottom-4 left-4 right-4' : 'absolute top-[170px] right-4 w-[250px]'} z-[500]`}>
+        <div className={`${isMobile ? 'absolute bottom-4 left-4 right-4' : 'absolute top-[170px] right-4 w-[250px]'} z-40`}>
           <ItemDetail 
             item={detailsItem.item}
             onClose={closeDetails}
