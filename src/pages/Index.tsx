@@ -151,7 +151,7 @@ const Index = () => {
         </div>
         
         {/* Mannequin display - 60% on desktop */}
-        <div className={`${isMobile ? 'w-full' : 'flex-1'} overflow-y-auto bg-gray-50 p-6`}>
+        <div className={`${isMobile ? 'w-full' : 'flex-1 flex justify-center'} overflow-y-auto bg-gray-50`}>
           <Mannequin 
             selectedItems={selectedItems} 
             selectedSizes={selectedSizes}

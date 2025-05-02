@@ -1,3 +1,4 @@
+
 import { ClothingItem } from "@/data/clothingItems";
 import ItemDetail from "./ItemDetail";
 import { useState } from "react";
@@ -49,13 +50,13 @@ const Mannequin = ({
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-full relative">
+    <div className="flex flex-col items-center h-full relative pt-6">
       <div className="text-center mb-8">
         <h2 className="text-2xl font-bold">Virtual Fitting Room</h2>
         <p className="text-gray-500">Try on different items to see how they look</p>
       </div>
       
-      {/* Maintained mannequin size at 900px height and 510px width */}
+      {/* Mannequin container */}
       <div className="relative h-[900px] w-[510px]">
         {/* Mannequin base image */}
         <div className="absolute inset-0 z-0 opacity-80">
@@ -67,9 +68,9 @@ const Mannequin = ({
           />
         </div>
 
-        {/* Interactive clothing zones - adjusted heights and positioning */}
+        {/* Interactive clothing zones */}
         
-        {/* Hat zone - unchanged */}
+        {/* Hat zone */}
         <div 
           className="absolute top-0 left-1/2 transform -translate-x-1/2 z-[400] 
                     w-[150px] h-[120px] cursor-pointer 
@@ -94,7 +95,7 @@ const Mannequin = ({
           )}
         </div>
         
-        {/* Top zone - height increased by 25% from 250px to 312.5px */}
+        {/* Top zone */}
         <div 
           className="absolute top-[120px] left-1/2 transform -translate-x-1/2 z-[300] 
                     w-[350px] h-[312px] cursor-pointer 
@@ -119,7 +120,7 @@ const Mannequin = ({
           )}
         </div>
         
-        {/* Bottom zone - height increased by 25% from 350px to 437.5px */}
+        {/* Bottom zone */}
         <div 
           className="absolute top-[370px] left-1/2 transform -translate-x-1/2 z-[200]
                     w-[350px] h-[438px] cursor-pointer 
@@ -144,9 +145,9 @@ const Mannequin = ({
           )}
         </div>
         
-        {/* Shoes zone - moved down by 15% of mannequin height (900px * 0.15 = 135px) */}
+        {/* Shoes zone - positioned to touch the bottom of the Bottom zone */}
         <div 
-          className="absolute bottom-[-135px] left-1/2 transform -translate-x-1/2 z-[100] 
+          className="absolute top-[808px] left-1/2 transform -translate-x-1/2 z-[100] 
                     w-[150px] h-[150px] cursor-pointer 
                     border-2 border-dashed border-green-600
                     hover:bg-green-200/50 transition-colors duration-300
