@@ -56,7 +56,8 @@ const Mannequin = ({
         <p className="text-gray-500">Try on different items to see how they look</p>
       </div>
       
-      <div className="relative h-[600px] w-[340px]">
+      {/* Increased mannequin size by 50% from 600px to 900px height and 340px to 510px width */}
+      <div className="relative h-[900px] w-[510px]">
         {/* Mannequin base image */}
         <div className="absolute inset-0 z-0 opacity-80">
           <img 
@@ -67,12 +68,12 @@ const Mannequin = ({
           />
         </div>
 
-        {/* Interactive clothing zones */}
+        {/* Interactive clothing zones - all increased by 50% */}
         
-        {/* Hat zone - top of mannequin */}
+        {/* Hat zone - top of mannequin - Z-index: 400 */}
         <div 
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 z-30 
-                    w-[100px] h-[80px] cursor-pointer 
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 z-[400] 
+                    w-[150px] h-[120px] cursor-pointer 
                     border-2 border-dashed border-green-600
                     hover:bg-green-200/50 transition-colors duration-300
                     rounded-md flex items-center justify-center"
@@ -94,10 +95,10 @@ const Mannequin = ({
           )}
         </div>
         
-        {/* Top zone - torso area */}
+        {/* Top zone - torso area - Z-index: 300 */}
         <div 
-          className="absolute top-[80px] left-1/2 transform -translate-x-1/2 z-20 
-                    w-[150px] h-[200px] cursor-pointer 
+          className="absolute top-[120px] left-1/2 transform -translate-x-1/2 z-[300] 
+                    w-[350px] h-[250px] cursor-pointer 
                     border-2 border-dashed border-green-600
                     hover:bg-green-200/50 transition-colors duration-300 
                     rounded-md flex items-center justify-center"
@@ -119,10 +120,10 @@ const Mannequin = ({
           )}
         </div>
         
-        {/* Bottom zone - waist to ankles */}
+        {/* Bottom zone - waist to ankles - Z-index: 200 */}
         <div 
-          className="absolute top-[280px] left-1/2 transform -translate-x-1/2 z-10
-                    w-[150px] h-[250px] cursor-pointer 
+          className="absolute top-[370px] left-1/2 transform -translate-x-1/2 z-[200]
+                    w-[350px] h-[350px] cursor-pointer 
                     border-2 border-dashed border-green-600
                     hover:bg-green-200/50 transition-colors duration-300
                     rounded-md flex items-center justify-center"
@@ -144,10 +145,10 @@ const Mannequin = ({
           )}
         </div>
         
-        {/* Shoes zone - feet */}
+        {/* Shoes zone - feet - Z-index: 100 */}
         <div 
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 
-                    w-[100px] h-[80px] cursor-pointer 
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-[100] 
+                    w-[150px] h-[120px] cursor-pointer 
                     border-2 border-dashed border-green-600
                     hover:bg-green-200/50 transition-colors duration-300
                     rounded-md flex items-center justify-center"
