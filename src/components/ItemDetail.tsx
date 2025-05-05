@@ -4,7 +4,6 @@ import { ClothingItem } from "@/data/clothingItems";
 import { Button } from "./ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { AspectRatio } from "./ui/aspect-ratio";
-import { HoverCard, HoverCardTrigger, HoverCardContent } from "./ui/hover-card";
 
 interface ItemDetailProps {
   item: ClothingItem;
@@ -64,24 +63,13 @@ const ItemDetail = ({
       </div>
 
       <div className="mb-4 bg-gray-50 rounded-md overflow-hidden">
-        <HoverCard>
-          <HoverCardTrigger asChild>
-            <AspectRatio ratio={1} className="w-full cursor-zoom-in">
-              <img 
-                src={item.image} 
-                alt={`${item.name} in ${item.color} by ${item.brand}`}
-                className="w-full h-full object-contain p-2 transition-transform hover:scale-105"
-              />
-            </AspectRatio>
-          </HoverCardTrigger>
-          <HoverCardContent className="w-80 p-0 border-0 shadow-xl">
-            <img 
-              src={item.image}
-              alt={`${item.name} in ${item.color} by ${item.brand}`}
-              className="w-full h-full object-contain rounded-md"
-            />
-          </HoverCardContent>
-        </HoverCard>
+        <AspectRatio ratio={1} className="w-full">
+          <img 
+            src={item.image} 
+            alt={`${item.name} by ${item.brand}`}
+            className="w-full h-full object-contain p-2"
+          />
+        </AspectRatio>
       </div>
       
       <div className="space-y-4">
@@ -89,7 +77,7 @@ const ItemDetail = ({
           {item.brand}
         </div>
         <div className="text-lg font-bold">
-          {item.name} - {item.color.charAt(0).toUpperCase() + item.color.slice(1)}
+          {item.name}
         </div>
         
         <div className="flex justify-between items-center">

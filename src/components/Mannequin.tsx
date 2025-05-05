@@ -173,7 +173,7 @@ const Mannequin = ({
       
       {/* Item Details Panel */}
       {detailsItem.item && (
-        <div className={`${isMobile ? 'absolute bottom-4 left-4 right-4' : 'absolute top-[170px] right-4 w-[250px]'} z-40`}>
+        <div className={`${isMobile ? 'absolute bottom-4 left-4 right-4' : 'absolute top-[170px] right-4 w-[250px]'} z-[900]`}>
           <ItemDetail 
             item={detailsItem.item}
             onClose={closeDetails}
