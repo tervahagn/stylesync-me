@@ -63,7 +63,7 @@ export const clothingItems: ClothingItem[] = [
     name: "Blazer Black",
     brand: "Vanguard Collection",
     category: "top",
-    image: "/lovable-uploads/a645e090-8c8d-43b1-a08b-fb3d56b57af0.png",
+    image: "/lovable-uploads/813b4f88-d7b8-4771-a9b6-d72e0ef8e12f.png", // Updated with new image
     color: "black",
     price: 120,
     colors: ["black", "navy", "grey"],
@@ -208,7 +208,7 @@ export const clothingItems: ClothingItem[] = [
     name: "Sweatpants Grey",
     brand: "Streetwise",
     category: "bottom",
-    image: "/lovable-uploads/f26fa8f5-8c8f-4458-9207-a2691530dd45.png",
+    image: "/lovable-uploads/add13d09-9510-475d-b858-9f3e388b2a49.png", // Updated with new image
     color: "grey",
     price: 40,
     colors: ["grey", "black", "navy"],
