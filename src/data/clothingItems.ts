@@ -52,7 +52,7 @@ export const clothingItems: ClothingItem[] = [
     name: "T-shirt Black",
     brand: "Meridian Apparel",
     category: "top",
-    image: "/lovable-uploads/b439dbc8-9367-48d7-b739-4e4a1233370c.png",
+    image: "/lovable-uploads/1e7acee3-7482-429e-8c82-8cdddf500942.png", // Swapped with Chinos Grey image
     color: "black",
     price: 25,
     colors: ["black", "white", "grey"],
@@ -164,7 +164,7 @@ export const clothingItems: ClothingItem[] = [
     name: "Chinos Grey",
     brand: "Vanguard Collection",
     category: "bottom",
-    image: "/lovable-uploads/1e7acee3-7482-429e-8c82-8cdddf500942.png",
+    image: "/lovable-uploads/b439dbc8-9367-48d7-b739-4e4a1233370c.png", // Swapped with T-shirt Black image
     color: "grey",
     price: 45,
     colors: ["grey", "beige", "navy"],
