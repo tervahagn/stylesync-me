@@ -21,25 +21,14 @@ const brands = [
   "Trekker Footwear"
 ];
 
-// Helper function to format item name from filename
-const formatNameFromFilename = (filename: string): string => {
-  // Split by hyphen and take parts after the second hyphen
-  const parts = filename.split('-');
-  if (parts.length >= 3) {
-    // Join all parts after the second hyphen and remove file extension
-    return parts.slice(2).join(' ').trim().replace('.png', '');
-  }
-  return filename;
-};
-
 export const clothingItems: ClothingItem[] = [
   // Hats (Category 1)
   {
     id: 1,
-    name: "Cap Black",
+    name: "Cap",
     brand: "Apex Headwear",
     category: "hat",
-    image: "/lovable-uploads/cc436444-3bcb-4cba-bbc1-a5fc82184930.png",
+    image: "/lovable-uploads/30cd1a4a-16c7-4380-83e0-f254159dc0e6.png",
     color: "black",
     price: 20,
     colors: ["black", "navy", "red"],
@@ -47,10 +36,10 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 2,
-    name: "Hat Brown",
+    name: "Hat",
     brand: "Apex Headwear",
     category: "hat",
-    image: "/lovable-uploads/317cc230-8cce-4d6b-8b20-67d1fc97c603.png",
+    image: "/lovable-uploads/edb1dc34-a51f-491e-acdd-d246aaec2eb7.png",
     color: "brown",
     price: 35,
     colors: ["brown", "black", "tan"],
@@ -60,10 +49,10 @@ export const clothingItems: ClothingItem[] = [
   // Tops (Category 2)
   {
     id: 3,
-    name: "T-shirt Black",
+    name: "T-shirt",
     brand: "Meridian Apparel",
     category: "top",
-    image: "/lovable-uploads/2095f7a3-83c9-46f2-82aa-42a136ab813a.png",
+    image: "/lovable-uploads/99504c5e-c113-4c1d-8995-f28ce1bcd376.png",
     color: "black",
     price: 25,
     colors: ["black", "white", "grey"],
@@ -71,10 +60,10 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 4,
-    name: "Blazer Black",
+    name: "Blazer",
     brand: "Vanguard Collection",
     category: "top",
-    image: "/lovable-uploads/d0d06ca4-1897-4fd9-9ab0-4390a9fa0574.png",
+    image: "/lovable-uploads/748fb7d7-60ad-4b4d-a6f7-0e481829cec2.png",
     color: "black",
     price: 120,
     colors: ["black", "navy", "grey"],
@@ -82,10 +71,10 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 5,
-    name: "Cardigan Grey",
+    name: "Cardigan",
     brand: "Meridian Apparel",
     category: "top",
-    image: "/lovable-uploads/25aa1a6e-0f13-4252-85bb-9c6e9fcb14d4.png",
+    image: "/lovable-uploads/3635d906-e9c7-4209-a862-37bf72053384.png",
     color: "grey",
     price: 60,
     colors: ["grey", "black", "navy"],
@@ -93,10 +82,10 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 6,
-    name: "Denim Jacket Blue",
+    name: "Denim Jacket",
     brand: "Blue Harbor",
     category: "top",
-    image: "/lovable-uploads/f80821c7-6ed2-4c4c-9ccf-a114df204b37.png",
+    image: "/lovable-uploads/8833f277-3316-4914-8d79-af1fbc834559.png",
     color: "blue",
     price: 80,
     colors: ["blue", "black", "light blue"],
@@ -104,10 +93,10 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 7,
-    name: "Hoodie Grey",
+    name: "Hoodie",
     brand: "Streetwise",
     category: "top",
-    image: "/lovable-uploads/a9605835-f921-489d-b64b-8d7a767107f6.png",
+    image: "/lovable-uploads/6f73acaf-7af9-4a90-ba70-19f8127699cb.png",
     color: "grey",
     price: 50,
     colors: ["grey", "black", "navy"],
@@ -115,21 +104,21 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 8,
-    name: "Leather Jacket Brown",
+    name: "Leather Jacket",
     brand: "Vanguard Collection",
     category: "top",
-    image: "/lovable-uploads/3aac0382-0c8d-4bcc-bb3d-48ff3f106e03.png",
-    color: "brown",
+    image: "/lovable-uploads/1aeae97f-41c4-4306-953f-e18a2e3f7411.png",
+    color: "burgundy",
     price: 150,
-    colors: ["brown", "black", "burgundy"],
+    colors: ["burgundy", "black", "brown"],
     sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 9,
-    name: "Military Jacket Khaki",
+    name: "Military Jacket",
     brand: "Streetwise",
     category: "top",
-    image: "/lovable-uploads/dd83d960-31b3-4a2a-9479-3ea975cdba07.png",
+    image: "/lovable-uploads/d1685fee-3f8d-4b64-8dad-7ce4acd22466.png",
     color: "khaki",
     price: 90,
     colors: ["khaki", "olive", "black"],
@@ -137,10 +126,10 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 10,
-    name: "Sport Jacket Green",
+    name: "Sport Jacket",
     brand: "Apex Headwear",
     category: "top",
-    image: "/lovable-uploads/9a65e9e9-08a8-49a3-8287-578390dd80f1.png",
+    image: "/lovable-uploads/99f62d47-70e7-4b90-b57d-ac82e633bc91.png",
     color: "green",
     price: 70,
     colors: ["green", "black", "blue"],
@@ -148,10 +137,10 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 11,
-    name: "Sweater Beige",
+    name: "Sweather",
     brand: "Blue Harbor",
     category: "top",
-    image: "/lovable-uploads/876769eb-6678-4482-8368-c190b2389ddf.png",
+    image: "/lovable-uploads/19b4a4af-cadb-4e1a-b662-c2f5a66683f1.png",
     color: "beige",
     price: 55,
     colors: ["beige", "grey", "black"],
@@ -159,11 +148,11 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 12,
-    name: "T-shirt Summer Vibes",
+    name: "T-shirt",
     brand: "Meridian Apparel",
     category: "top",
-    image: "/lovable-uploads/45665bc2-7a70-43dd-ad66-1e328f503224.png",
-    color: "white",
+    image: "/lovable-uploads/e05a6a5f-34c2-4c5e-8df9-f68470aaa032.png",
+    color: "white - graphic",
     price: 30,
     colors: ["white", "black", "grey"],
     sizes: ["S", "M", "L", "XL"]
@@ -172,10 +161,10 @@ export const clothingItems: ClothingItem[] = [
   // Bottoms (Category 3)
   {
     id: 13,
-    name: "Chinos Grey",
+    name: "Chinos",
     brand: "Vanguard Collection",
     category: "bottom",
-    image: "/lovable-uploads/b693ac33-b2c8-43bb-9c47-5225f0853e40.png",
+    image: "/lovable-uploads/b14bb879-476b-4fff-a75f-9891feb2707b.png",
     color: "grey",
     price: 45,
     colors: ["grey", "beige", "navy"],
@@ -183,10 +172,10 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 14,
-    name: "Jeans Blue",
+    name: "Jeans",
     brand: "Blue Harbor",
     category: "bottom",
-    image: "/lovable-uploads/8e4431dd-b484-40ea-8ffa-d1fd979b4db1.png",
+    image: "/lovable-uploads/771b3a0e-1446-4131-84cc-cb8a3a0e3e15.png",
     color: "blue",
     price: 50,
     colors: ["blue", "black", "grey"],
@@ -194,10 +183,10 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 15,
-    name: "Leggings Black",
+    name: "Leggins",
     brand: "Meridian Apparel",
     category: "bottom",
-    image: "/lovable-uploads/82f06f23-0368-4d3a-83f5-a799bb55b0f2.png",
+    image: "/lovable-uploads/05bf97b9-502e-4831-afb9-96709af9d2bb.png",
     color: "black",
     price: 35,
     colors: ["black", "grey", "navy"],
@@ -205,10 +194,10 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 16,
-    name: "Shorts Navy",
+    name: "Shorts",
     brand: "Streetwise",
     category: "bottom",
-    image: "/lovable-uploads/e3c31702-c152-4895-bdec-477070c4a97d.png",
+    image: "/lovable-uploads/9b0ecac0-fe78-434d-9d7f-72fd35f9c68c.png",
     color: "navy",
     price: 25,
     colors: ["navy", "black", "grey"],
@@ -216,10 +205,10 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 17,
-    name: "Sweatpants Grey",
+    name: "Sweatpants",
     brand: "Streetwise",
     category: "bottom",
-    image: "/lovable-uploads/275cba51-0736-4924-bc71-9494df67cc20.png",
+    image: "/lovable-uploads/593f9b19-23c5-4567-bb6e-fe8498a2078a.png",
     color: "grey",
     price: 40,
     colors: ["grey", "black", "navy"],
@@ -229,21 +218,21 @@ export const clothingItems: ClothingItem[] = [
   // Shoes (Category 4)
   {
     id: 18,
-    name: "Boots Brown",
+    name: "Boots",
     brand: "Trekker Footwear",
     category: "shoe",
-    image: "/lovable-uploads/8e59588a-1cf7-4489-8d53-cda3e9a73ddc.png",
-    color: "brown",
+    image: "/lovable-uploads/26c4e1e0-23d6-4759-9504-2d6337aa2193.png",
+    color: "coffee",
     price: 95,
-    colors: ["brown", "black", "tan"],
+    colors: ["coffee", "black", "tan"],
     sizes: ["7", "8", "9", "10", "11"]
   },
   {
     id: 19,
-    name: "Flipflops Green",
+    name: "Flipflops",
     brand: "Trekker Footwear",
     category: "shoe",
-    image: "/lovable-uploads/209bf1c3-0915-480a-aebb-f2f86c86107a.png",
+    image: "/lovable-uploads/74b91e6d-f318-4bf3-a706-ad5622b487d0.png",
     color: "green",
     price: 20,
     colors: ["green", "black", "blue"],
@@ -251,10 +240,10 @@ export const clothingItems: ClothingItem[] = [
   },
   {
     id: 20,
-    name: "Sneakers Black",
+    name: "Sneakers",
     brand: "Trekker Footwear",
     category: "shoe",
-    image: "/lovable-uploads/7f09a31d-89fa-4163-8749-c733bff7f610.png",
+    image: "/lovable-uploads/a16f2266-f1b3-4adc-a58e-b93a00fcda8a.png",
     color: "black",
     price: 75,
     colors: ["black", "white", "grey"],
