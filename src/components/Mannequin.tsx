@@ -74,8 +74,8 @@ const Mannequin = ({
         <div 
           className="absolute top-0 left-1/2 transform -translate-x-1/2 z-[400] 
                     w-[150px] h-[120px] cursor-pointer 
-                    border-2 border-dashed border-green-600
-                    hover:bg-green-200/50 transition-colors duration-300
+                    border-2 border-dotted border-gray-300
+                    hover:border-gray-400 transition-colors duration-300
                     rounded-md flex items-center justify-center"
           onClick={() => selectedItems.hat && showDetails(selectedItems.hat, 'hat')}
           aria-label="Head zone for hats"
@@ -99,8 +99,8 @@ const Mannequin = ({
         <div 
           className="absolute top-[120px] left-1/2 transform -translate-x-1/2 z-[300] 
                     w-[350px] h-[312px] cursor-pointer 
-                    border-2 border-dashed border-green-600
-                    hover:bg-green-200/50 transition-colors duration-300 
+                    border-2 border-dotted border-gray-300
+                    hover:border-gray-400 transition-colors duration-300 
                     rounded-md flex items-center justify-center"
           onClick={() => selectedItems.top && showDetails(selectedItems.top, 'top')}
           aria-label="Top zone for shirts"
@@ -124,8 +124,8 @@ const Mannequin = ({
         <div 
           className="absolute top-[370px] left-1/2 transform -translate-x-1/2 z-[200]
                     w-[350px] h-[438px] cursor-pointer 
-                    border-2 border-dashed border-green-600
-                    hover:bg-green-200/50 transition-colors duration-300
+                    border-2 border-dotted border-gray-300
+                    hover:border-gray-400 transition-colors duration-300
                     rounded-md flex items-center justify-center"
           onClick={() => selectedItems.bottom && showDetails(selectedItems.bottom, 'bottom')}
           aria-label="Bottom zone for pants"
@@ -149,8 +149,8 @@ const Mannequin = ({
         <div 
           className="absolute top-[808px] left-1/2 transform -translate-x-1/2 z-[100] 
                     w-[150px] h-[150px] cursor-pointer 
-                    border-2 border-dashed border-green-600
-                    hover:bg-green-200/50 transition-colors duration-300
+                    border-2 border-dotted border-gray-300
+                    hover:border-gray-400 transition-colors duration-300
                     rounded-md flex items-center justify-center"
           onClick={() => selectedItems.shoe && showDetails(selectedItems.shoe, 'shoe')}
           aria-label="Shoe zone for footwear"
