@@ -88,7 +88,7 @@ const ItemDetail = ({
               <SelectTrigger className="w-24">
                 <SelectValue>{selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1)}</SelectValue>
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="z-[1100]">
                 {item.colors.map((color) => (
                   <SelectItem key={color} value={color}>
                     {color.charAt(0).toUpperCase() + color.slice(1)}
@@ -105,7 +105,7 @@ const ItemDetail = ({
             <SelectTrigger className="w-24">
               <SelectValue>{selectedSize}</SelectValue>
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="z-[1100]">
               {item.sizes.map((size) => (
                 <SelectItem key={size} value={size}>{size}</SelectItem>
               ))}
