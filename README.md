@@ -1,73 +1,56 @@
-# Welcome to your Lovable project
+# StyleSync.me
 
-## Project info
+### Your AI-powered Personal Wardrobe Assistant
 
-**URL**: https://lovable.dev/projects/cb7d0c5e-c588-413d-a268-bc2a59aa502b
+StyleSync.me transforms your closet into an intelligent, personalized fashion assistant. Effortlessly upload your clothing, and let AI create stylish outfit combinations tailored to your mood, weather, and occasions.
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+* **Smart Closet Management:** Upload photos of your clothes—our AI automatically removes backgrounds and categorizes each item.
+* **Personalized Outfit Suggestions:** Receive curated outfit recommendations suited to daily weather forecasts, special events, or your current mood.
+* **Virtual Stylebook:** Easily save your favorite outfits and revisit them anytime.
+* **Intuitive Interface:** Clean, user-friendly design simplifies wardrobe organization and styling.
+* **Flexible Plans:** Enjoy a generous free tier or upgrade to unlimited styling with our Pro subscription.
 
-**Use Lovable**
+## 🚀 How to Get Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/cb7d0c5e-c588-413d-a268-bc2a59aa502b) and start prompting.
+1. **Clone the Repository**
 
-Changes made via Lovable will be committed automatically to this repo.
+   ```bash
+   git clone https://github.com/tervahagn/stylesync-me.git
+   cd stylesync-me
+   ```
 
-**Use your preferred IDE**
+2. **Install Dependencies**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3. **Upload and Organize Your Clothes**
 
-Follow these steps:
+   * Effortlessly add clothing items; the app handles tagging and sorting.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+4. **Generate AI-Powered Outfits**
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+   * Instantly see outfit suggestions based on current weather, upcoming occasions, or how you’re feeling.
 
-# Step 3: Install the necessary dependencies.
-npm i
+5. **Save Your Favorites**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+   * Build your digital wardrobe and always have stylish outfit ideas at your fingertips.
 
-**Edit a file directly in GitHub**
+## 📱 Availability
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Available on iOS and Android, with seamless synchronization across devices.
 
-**Use GitHub Codespaces**
+## 💡 Coming Soon
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+* Calendar integration
+* Retail recommendations
+* Community sharing
 
-## What technologies are used for this project?
+Contributions to these features are warmly welcomed!
 
-This project is built with .
+## 📞 Support
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/cb7d0c5e-c588-413d-a268-bc2a59aa502b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+For any questions, suggestions, or feedback, please contact us through the GitHub issues section or via our website https://stylesync.me
