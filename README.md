@@ -17,7 +17,7 @@ StyleSync.me transforms your closet into an intelligent, personalized fashion as
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/tervahagn/stylesync-me.git
+   git clone -b public https://github.com/tervahagn/stylesync-me.git
    cd stylesync-me
    ```
 
@@ -33,7 +33,7 @@ StyleSync.me transforms your closet into an intelligent, personalized fashion as
 
 4. **Generate AI-Powered Outfits**
 
-   * Instantly see outfit suggestions based on current weather, upcoming occasions, or how you’re feeling.
+   * Instantly see outfit suggestions based on current weather, upcoming occasions, or how you're feeling.
 
 5. **Save Your Favorites**
 
@@ -54,3 +54,8 @@ Contributions to these features are warmly welcomed!
 ## 📞 Support
 
 For any questions, suggestions, or feedback, please contact us through the GitHub issues section or via our website https://stylesync.me
+
+# Run with Docker (requires Docker Desktop)
+./run-docker.sh
+
+# Access at http://localhost:3000
