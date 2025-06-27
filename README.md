@@ -6,7 +6,7 @@ StyleSync.me transforms your closet into an intelligent, personalized fashion as
 
 ## 🌐 Live Demo
 
-**Try StyleSync.me online:** https://tervahagn.github.io/stylesync-me/
+**Try StyleSync.me online:** https://demo.stylesync.me/
 
 ## ✨ Features
 
