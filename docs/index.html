@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleSync.me - AI Wardrobe Assistant</title>
+    <meta name="description" content="Your AI-powered Personal Wardrobe Assistant">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            color: white;
+            max-width: 600px;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .features {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .feature h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        .feature p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>StyleSync.me</h1>
+        <p>Your AI-powered Personal Wardrobe Assistant</p>
+        
+        <a href="/stylesync-me/" class="btn">🚀 Launch App</a>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>🎯 Smart Closet</h3>
+                <p>Upload photos of your clothes—AI automatically removes backgrounds and categorizes each item.</p>
+            </div>
+            <div class="feature">
+                <h3>👗 Outfit Suggestions</h3>
+                <p>Receive curated outfit recommendations suited to weather, events, or your mood.</p>
+            </div>
+            <div class="feature">
+                <h3>💾 Virtual Stylebook</h3>
+                <p>Save your favorite outfits and revisit them anytime.</p>
+            </div>
+        </div>
+        
+        <div style="margin-top: 2rem; opacity: 0.7;">
+            <p>Install locally: <code>curl -sSL https://raw.githubusercontent.com/tervahagn/stylesync-me/public/install-stylesync.sh | bash</code></p>
+        </div>
+    </div>
+</body>
+</html> 

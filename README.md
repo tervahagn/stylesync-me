@@ -4,6 +4,10 @@
 
 StyleSync.me transforms your closet into an intelligent, personalized fashion assistant. Effortlessly upload your clothing, and let AI create stylish outfit combinations tailored to your mood, weather, and occasions.
 
+## 🌐 Live Demo
+
+**Try StyleSync.me online:** https://tervahagn.github.io/stylesync-me/
+
 ## ✨ Features
 
 * **Smart Closet Management:** Upload photos of your clothes—our AI automatically removes backgrounds and categorizes each item.
@@ -12,32 +16,32 @@ StyleSync.me transforms your closet into an intelligent, personalized fashion as
 * **Intuitive Interface:** Clean, user-friendly design simplifies wardrobe organization and styling.
 * **Flexible Plans:** Enjoy a generous free tier or upgrade to unlimited styling with our Pro subscription.
 
-## 🚀 How to Get Started
+## 🚀 Quick Start
 
+### Option 1: One-Click Install (macOS)
+```bash
+curl -sSL https://raw.githubusercontent.com/tervahagn/stylesync-me/public/install-stylesync.sh | bash
+```
+
+### Option 2: Manual Setup
 1. **Clone the Repository**
-
    ```bash
-   git clone -b public https://github.com/tervahagn/stylesync-me.git
+   git clone https://github.com/tervahagn/stylesync-me.git
    cd stylesync-me
    ```
 
 2. **Install Dependencies**
-
    ```bash
-   pip install -r requirements.txt
+   npm install
    ```
 
-3. **Upload and Organize Your Clothes**
+3. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
 
-   * Effortlessly add clothing items; the app handles tagging and sorting.
-
-4. **Generate AI-Powered Outfits**
-
-   * Instantly see outfit suggestions based on current weather, upcoming occasions, or how you're feeling.
-
-5. **Save Your Favorites**
-
-   * Build your digital wardrobe and always have stylish outfit ideas at your fingertips.
+4. **Open Browser**
+   Navigate to http://localhost:5173
 
 ## 📱 Availability
 
@@ -59,3 +63,14 @@ For any questions, suggestions, or feedback, please contact us through the GitHu
 ./run-docker.sh
 
 # Access at http://localhost:3000
+
+curl -sSL https://raw.githubusercontent.com/tervahagn/stylesync-me/public/install-stylesync.sh | bash
+
+# Install
+curl -sSL https://raw.githubusercontent.com/tervahagn/stylesync-me/public/install-stylesync.sh | bash
+
+# Stop
+cd ~/StyleSync && docker-compose down
+
+# Update  
+cd ~/StyleSync && ./update-stylesync.sh
