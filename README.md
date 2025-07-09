@@ -74,3 +74,5 @@ cd ~/StyleSync && docker-compose down
 
 # Update  
 cd ~/StyleSync && ./update-stylesync.sh
+
+# Trigger redeploy
