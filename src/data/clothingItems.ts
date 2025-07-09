@@ -193,17 +193,6 @@ export const clothingItems: ClothingItem[] = [
     sizes: ["XS", "S", "M", "L"]
   },
   {
-    id: 16,
-    name: "Shorts Navy",
-    brand: "Streetwise",
-    category: "bottom",
-    image: "/lovable-uploads/21efdf84-0219-4d77-8b82-a2fcbe539dcb.png",
-    color: "navy",
-    price: 25,
-    colors: ["navy", "black", "grey"],
-    sizes: ["S", "M", "L", "XL"]
-  },
-  {
     id: 17,
     name: "Sweatpants Grey",
     brand: "Streetwise",

@@ -128,10 +128,10 @@ const Mannequin = ({
           )}
         </div>
         
-        {/* Bottom zone */}
+        {/* Bottom zone - increased height by 30% and extended to shoes */}
         <div 
-          className="absolute top-[432px] left-1/2 transform -translate-x-1/2 z-[200] 
-                    w-[350px] h-[312px] cursor-pointer 
+          className="absolute top-[374px] left-1/2 transform -translate-x-1/2 z-[200] 
+                    w-[350px] h-[481px] cursor-pointer 
                     border border-dotted border-gray-300
                     hover:bg-gray-100/20 transition-colors duration-300 
                     rounded-md flex items-center justify-center"
@@ -156,9 +156,9 @@ const Mannequin = ({
           )}
         </div>
         
-        {/* Shoes zone - positioned to touch the bottom of the Bottom zone */}
+        {/* Shoes zone - moved up 5% to overlap under bottoms */}
         <div 
-          className="absolute top-[808px] left-1/2 transform -translate-x-1/2 z-[100] 
+          className="absolute top-[812px] left-1/2 transform -translate-x-1/2 z-[150] 
                     w-[150px] h-[150px] cursor-pointer 
                     border border-dotted border-gray-300
                     hover:bg-gray-100/20 transition-colors duration-300
