@@ -51,7 +51,7 @@ const ItemDetail = ({
   return (
     <div className="p-4 bg-white rounded-lg shadow-lg">
       <div className="flex justify-between items-center mb-2">
-        <div className="font-bold text-xl">£{item.price.toFixed(2)}</div>
+        <div className="font-bold text-xl">${item.price.toFixed(2)}</div>
         <Button 
           variant="ghost" 
           size="icon" 
