@@ -1,5 +1,5 @@
 # StyleSync.me
-
+![StyleSync.me_Hero](public/hero.png)
 ### Your AI-powered Personal Wardrobe Assistant
 
 StyleSync.me transforms your closet into an intelligent, personalized fashion assistant. Effortlessly upload your clothing, and let AI create stylish outfit combinations tailored to your mood, weather, and occasions.
