@@ -5,6 +5,7 @@ import ItemsSidebar from "@/components/ItemsSidebar";
 import Mannequin from "@/components/Mannequin";
 import { useToast } from "@/hooks/use-toast";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Home } from "lucide-react";
 
 const Index = () => {
   const { toast } = useToast();
@@ -136,6 +137,17 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Floating Home Button */}
+      <a
+        href="https://stylesync.me"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed top-4 right-4 z-[2000] bg-white shadow-lg rounded-full w-14 h-14 flex items-center justify-center border-2 border-gray-200 hover:bg-gray-100 transition-all duration-200"
+        style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.10)' }}
+        aria-label="Home"
+      >
+        <Home className="w-7 h-7 text-gray-500" />
+      </a>
       <main className="flex flex-1 flex-col md:flex-row overflow-hidden">
         {/* Items sidebar - 40% on desktop, full width on mobile */}
         <div className="w-full md:w-2/5 border-r overflow-hidden">
