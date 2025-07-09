@@ -168,7 +168,7 @@ const ItemsSidebar = ({
         {/* Cart summary */}
         <div className="border-t p-4 bg-gray-600 text-white flex justify-between items-center">
           <div>
-            <div className="text-md font-semibold">Total price: ${totalPrice.toFixed(2)}</div>
+            <div className="text-md font-semibold">Total price: ${Number(totalPrice) % 1 === 0 ? Number(totalPrice) : Number(totalPrice).toFixed(2)}</div>
             <button 
               className="text-sm text-white/80 underline"
               onClick={onClearAll}
