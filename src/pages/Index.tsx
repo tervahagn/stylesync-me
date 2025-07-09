@@ -5,7 +5,7 @@ import ItemsSidebar from "@/components/ItemsSidebar";
 import Mannequin from "@/components/Mannequin";
 import { useToast } from "@/hooks/use-toast";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Home, MessageCircle } from "lucide-react";
+import { Home, MessageCircle, List } from "lucide-react";
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 
 const Index = () => {
@@ -165,6 +165,42 @@ const Index = () => {
           <div className="text-lg font-semibold mb-2">AI Fashion Assistant</div>
           <div className="text-gray-700">
             There will be an AI-powered fashion assistant that instantly creates complete outfits based on visitors' natural language requests.
+          </div>
+        </DialogContent>
+      </Dialog>
+      {/* Floating Backlog Button */}
+      <Dialog>
+        <DialogTrigger asChild>
+          <button
+            className="fixed bottom-4 right-4 z-[3000] bg-white shadow-lg rounded-full w-14 h-14 flex items-center justify-center border-2 border-gray-200 hover:bg-gray-100 transition-all duration-200"
+            aria-label="Backlog"
+            style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.10)' }}
+          >
+            <List className="w-7 h-7 text-gray-500" />
+          </button>
+        </DialogTrigger>
+        <DialogContent className="z-[3000] max-w-2xl">
+          <div className="text-lg font-semibold mb-4">Product Backlog</div>
+          <div className="overflow-x-auto">
+            <table className="min-w-full border text-sm">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="px-4 py-2 border-b text-left">Backlog Name</th>
+                  <th className="px-4 py-2 border-b text-left">Planned Work</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="px-4 py-2 border-b align-top">Enhance AR Realism</td><td className="px-4 py-2 border-b">Improve rendering fidelity and fit accuracy of the virtual mannequin</td></tr>
+                <tr><td className="px-4 py-2 border-b align-top">Expand AI Outfit Dataset</td><td className="px-4 py-2 border-b">Broaden brand/style catalog and add contextual inputs for recommendations</td></tr>
+                <tr><td className="px-4 py-2 border-b align-top">Prototype StyleSync API (B2B)</td><td className="px-4 py-2 border-b">Develop a white-label API/SDK for retailer integration</td></tr>
+                <tr><td className="px-4 py-2 border-b align-top">CMS Platform Integrations</td><td className="px-4 py-2 border-b">Build connectors for Shopify, Magento, BigCommerce, WooCommerce, etc.</td></tr>
+                <tr><td className="px-4 py-2 border-b align-top">Professional Stylist Features & Brand Portal</td><td className="px-4 py-2 border-b">Create advanced styling tools and a portal for brands and agencies</td></tr>
+                <tr><td className="px-4 py-2 border-b align-top">Localization & Regional Styling</td><td className="px-4 py-2 border-b">Adapt UI, styling rules, and local catalogs for key markets</td></tr>
+                <tr><td className="px-4 py-2 border-b align-top">Customizable App Configuration</td><td className="px-4 py-2 border-b">Enable merchants to configure widget placement and styling settings</td></tr>
+                <tr><td className="px-4 py-2 border-b align-top">Social & Gamification Modules</td><td className="px-4 py-2 border-b">Introduce badges, challenges, community feeds, and peer-voting</td></tr>
+                <tr><td className="px-4 py-2 border-b align-top">In-Store Fulfillment & Reservations</td><td className="px-4 py-2 border-b">Implement “Send to Store” reservation flow for physical outlets</td></tr>
+              </tbody>
+            </table>
           </div>
         </DialogContent>
       </Dialog>
