@@ -20,6 +20,8 @@ interface ItemsSidebarProps {
   onToggleFavorite: (item: ClothingItem) => void;
   totalPrice: number;
   onClearAll: () => void;
+  activeCategory: string;
+  setActiveCategory: (category: string) => void;
 }
 
 const ItemsSidebar = ({
@@ -29,9 +31,10 @@ const ItemsSidebar = ({
   favorites,
   onToggleFavorite,
   totalPrice,
-  onClearAll
+  onClearAll,
+  activeCategory,
+  setActiveCategory
 }: ItemsSidebarProps) => {
-  const [activeCategory, setActiveCategory] = useState<string>("top");
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [selectedSize, setSelectedSize] = useState<string>("all_sizes");
   const [selectedColor, setSelectedColor] = useState<string>("all_colors");
@@ -124,7 +127,7 @@ const ItemsSidebar = ({
         </div>
       </div>
       
-      <Tabs defaultValue="top" className="flex-1 flex flex-col" onValueChange={setActiveCategory}>
+      <Tabs value={activeCategory} className="flex-1 flex flex-col" onValueChange={setActiveCategory}>
         <div className="border-b">
           <TabsList className="w-full justify-start h-auto p-0 bg-transparent">
             <TabsTrigger value="top" className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none data-[state=active]:shadow-none px-4 py-2">

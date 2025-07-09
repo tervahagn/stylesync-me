@@ -25,6 +25,7 @@ interface MannequinProps {
   };
   onSizeChange: (category: string, size: string) => void;
   onColorChange: (category: string, color: string) => void;
+  setActiveCategory?: (category: string) => void;
 }
 
 const Mannequin = ({ 
@@ -32,7 +33,8 @@ const Mannequin = ({
   selectedSizes, 
   selectedColors,
   onSizeChange,
-  onColorChange
+  onColorChange,
+  setActiveCategory
 }: MannequinProps) => {
   const [detailsItem, setDetailsItem] = useState<{
     item: ClothingItem | null,
@@ -77,7 +79,10 @@ const Mannequin = ({
                     border border-dotted border-gray-300
                     hover:bg-gray-100/20 transition-colors duration-300
                     rounded-md flex items-center justify-center"
-          onClick={() => selectedItems.hat && showDetails(selectedItems.hat, 'hat')}
+          onClick={() => {
+            setActiveCategory && setActiveCategory('hat');
+            selectedItems.hat && showDetails(selectedItems.hat, 'hat');
+          }}
           aria-label="Head zone for hats"
         >
           {selectedItems.hat ? (
@@ -102,7 +107,10 @@ const Mannequin = ({
                     border border-dotted border-gray-300
                     hover:bg-gray-100/20 transition-colors duration-300 
                     rounded-md flex items-center justify-center"
-          onClick={() => selectedItems.top && showDetails(selectedItems.top, 'top')}
+          onClick={() => {
+            setActiveCategory && setActiveCategory('top');
+            selectedItems.top && showDetails(selectedItems.top, 'top');
+          }}
           aria-label="Top zone for shirts"
         >
           {selectedItems.top ? (
@@ -122,12 +130,15 @@ const Mannequin = ({
         
         {/* Bottom zone */}
         <div 
-          className="absolute top-[370px] left-1/2 transform -translate-x-1/2 z-[200]
-                    w-[350px] h-[438px] cursor-pointer 
+          className="absolute top-[432px] left-1/2 transform -translate-x-1/2 z-[200] 
+                    w-[350px] h-[312px] cursor-pointer 
                     border border-dotted border-gray-300
-                    hover:bg-gray-100/20 transition-colors duration-300
+                    hover:bg-gray-100/20 transition-colors duration-300 
                     rounded-md flex items-center justify-center"
-          onClick={() => selectedItems.bottom && showDetails(selectedItems.bottom, 'bottom')}
+          onClick={() => {
+            setActiveCategory && setActiveCategory('bottom');
+            selectedItems.bottom && showDetails(selectedItems.bottom, 'bottom');
+          }}
           aria-label="Bottom zone for pants"
         >
           {selectedItems.bottom ? (
@@ -152,7 +163,10 @@ const Mannequin = ({
                     border border-dotted border-gray-300
                     hover:bg-gray-100/20 transition-colors duration-300
                     rounded-md flex items-center justify-center"
-          onClick={() => selectedItems.shoe && showDetails(selectedItems.shoe, 'shoe')}
+          onClick={() => {
+            setActiveCategory && setActiveCategory('shoe');
+            selectedItems.shoe && showDetails(selectedItems.shoe, 'shoe');
+          }}
           aria-label="Shoe zone for footwear"
         >
           {selectedItems.shoe ? (
