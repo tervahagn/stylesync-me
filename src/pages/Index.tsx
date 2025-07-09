@@ -5,7 +5,8 @@ import ItemsSidebar from "@/components/ItemsSidebar";
 import Mannequin from "@/components/Mannequin";
 import { useToast } from "@/hooks/use-toast";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Home } from "lucide-react";
+import { Home, MessageCircle } from "lucide-react";
+import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 
 const Index = () => {
   const { toast } = useToast();
@@ -148,6 +149,25 @@ const Index = () => {
       >
         <Home className="w-7 h-7 text-gray-500" />
       </a>
+
+      {/* Floating Chatbot Button */}
+      <Dialog>
+        <DialogTrigger asChild>
+          <button
+            className="fixed top-1/2 right-4 z-[3000] bg-white shadow-lg rounded-full w-14 h-14 flex items-center justify-center border-2 border-gray-200 hover:bg-gray-100 transition-all duration-200"
+            style={{ transform: 'translateY(-50%)', boxShadow: '0 4px 16px rgba(0,0,0,0.10)' }}
+            aria-label="Chatbot"
+          >
+            <MessageCircle className="w-7 h-7 text-gray-500" />
+          </button>
+        </DialogTrigger>
+        <DialogContent className="z-[3000]">
+          <div className="text-lg font-semibold mb-2">AI Fashion Assistant</div>
+          <div className="text-gray-700">
+            There will be an AI-powered fashion assistant that instantly creates complete outfits based on visitors' natural language requests.
+          </div>
+        </DialogContent>
+      </Dialog>
       <main className="flex flex-1 flex-col md:flex-row overflow-hidden">
         {/* Items sidebar - 40% on desktop, full width on mobile */}
         <div className="w-full md:w-2/5 border-r overflow-hidden">
